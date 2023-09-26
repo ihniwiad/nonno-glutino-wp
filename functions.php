@@ -1041,32 +1041,6 @@ if ( file_exists( $file ) ) {
 
 
 
-/**
- * faq custom post
- */
-$file = dirname(__FILE__).'/inc/faq/custom-post-type.php';
-if ( file_exists( $file ) ) {
-    require $file;
-}
-$file = dirname(__FILE__).'/inc/faq/custom-post-type-2.php';
-if ( file_exists( $file ) ) {
-    require $file;
-}
-$file = dirname(__FILE__).'/inc/faq/custom-post-type-3.php';
-if ( file_exists( $file ) ) {
-    require $file;
-}
-/**
- * faq list shortcode
- */
-$file = dirname( __FILE__ ) . '/inc/faq/shortcode.php';
-if ( file_exists( $file ) ) {
-    require $file;
-    ( new FaqShortcode() )->init();
-}
-
-
-
 /*
  * Set post views count using post meta
  */
@@ -1452,33 +1426,5 @@ if ( file_exists( $file ) ) {
     require $file;
     ( new ReferencesShortcode() )->init();
 }
-
-
-/**
- * tutorials
- */
-// custom post type
-$file = dirname( __FILE__ ).'/inc/tutorials/custom-post-type.php';
-if ( file_exists( $file ) ) {
-    require $file;
-}
-// shortcode
-$file = dirname( __FILE__ ) . '/inc/tutorials/shortcode.php';
-if ( file_exists( $file ) ) {
-    require $file;
-    ( new TutorialsShortcode() )->init();
-}
-// // tax meta box
-// $file = dirname( __FILE__ ) . '/inc/tutorials/taxonomy-meta-box.php';
-// if ( file_exists( $file ) ) {
-//     require $file;
-//     ( new Tutorials_Tax_Meta )->init();
-// }
-// // taxonomy
-// $file = dirname( __FILE__ ) . '/inc/tutorials/taxonomy.php';
-// if ( file_exists( $file ) ) {
-//     require $file;
-//     ( new Tutorials_Taxonomy )->init();
-// }
 
 
