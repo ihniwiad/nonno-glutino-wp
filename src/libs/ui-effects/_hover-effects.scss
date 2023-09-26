@@ -1,0 +1,97 @@
+// var
+
+
+$bsx-hover-transition:          $bsx-basic-transition !default;
+
+
+// shadow
+$bsx-hover-box-shadow:      0 1px 5px 0 rgba(0, 0, 0, 0) !default;
+$bsx-hover-hover-box-shadow:  0 1px 5px 0 rgba(0, 0, 0, 0.35) !default;
+
+
+// move
+$bsx-hover-move-top:          -1px !default;
+
+
+// img zoom
+$bsx-hover-img-zoom-transition:           all .4s ease-in-out !default;
+$bsx-hover-img-zoom-transform:            scale(1.05) !default;
+
+
+
+// style
+
+
+// SHADOW
+
+.hover-shadow {
+  transition: $bsx-hover-transition;
+  box-shadow: $bsx-hover-box-shadow;
+
+  @include bsx-hover-focus {
+    box-shadow: $bsx-hover-hover-box-shadow;
+  }
+}
+
+
+// MOVE
+
+.hover-move {
+  position: relative;
+  transition: $bsx-hover-transition;
+
+  @include bsx-hover-focus {
+    top: $bsx-hover-move-top;
+  }
+}
+
+
+// COLOR
+
+.hover-text-primary {
+  @include bsx-hover-focus {
+    color: $primary !important;
+  }
+}
+.hover-text-secondary {
+  @include bsx-hover-focus {
+    color: $secondary !important;
+  }
+}
+.hover-text-dark {
+  @include bsx-hover-focus {
+    color: $dark !important;
+  }
+}
+
+
+// BG
+
+[class*="hover-bg"] {
+  transition: $bsx-hover-transition;
+}
+.hover-bg-light {
+  @include bsx-hover-focus {
+    background-color: $light;
+  }
+}
+.hover-bg-white {
+  @include bsx-hover-focus {
+    background-color: $white;
+  }
+}
+
+
+// ZOOM IN
+
+// NOTE: use .of-hidden for parent of img
+.img-hover-zoom-in {
+  img {
+    transition: $bsx-hover-img-zoom-transition;
+  }
+  @include bsx-hover-focus {
+    img {
+      transform: $bsx-hover-img-zoom-transform;
+    }
+  }
+}

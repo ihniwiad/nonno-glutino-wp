@@ -1,0 +1,60 @@
+
+
+@if $bsx-button-primary-color {
+	.btn-primary {
+		color: $bsx-button-primary-color;
+		@include bsx-hover-focus {
+			color: $bsx-button-primary-color;
+		}
+		&:not(:disabled):not(.disabled):active,
+		&:focus,
+		&:not(:disabled):not(.disabled).active {
+			color: $bsx-button-primary-color;
+		}
+	}
+	.btn-outline-primary {
+		&:hover,
+		&:not(:disabled):not(.disabled).active {
+			color: $bsx-button-primary-color;
+
+			&:focus,
+			&:not(:disabled):not(.disabled):active {
+				color: $bsx-button-primary-color;
+			}
+		}
+		&:focus,
+		&:active {
+			color: $bsx-text-primary;
+		}
+	}
+}
+
+
+@if $bsx-button-light-color {
+	.btn-light {
+		color: $bsx-button-light-color;
+		@include bsx-hover-focus {
+			color: $bsx-button-light-color;
+		}
+		&:not(:disabled):not(.disabled):active,
+		&:focus,
+		&:not(:disabled):not(.disabled).active {
+			color: $bsx-button-light-color;
+		}
+	}
+	.btn-outline-light {
+		&:hover {
+			color: $bsx-button-light-color;
+			
+			&:focus,
+			&:not(:disabled):not(.disabled):active {
+				color: $bsx-button-light-color;
+			}
+		}
+		&:focus,
+		&:not(:disabled):not(.disabled):active,
+		&:not(:disabled):not(.disabled).active {
+			color: $bsx-text-primary;
+		}
+	}
+}

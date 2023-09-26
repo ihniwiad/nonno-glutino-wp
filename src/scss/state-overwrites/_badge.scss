@@ -1,0 +1,23 @@
+
+
+@if $bsx-button-primary-color {
+	.badge-primary {
+		color: $bsx-button-primary-color;
+	}
+	a.badge-primary {
+		@include bsx-hover-focus {
+			color: $bsx-button-primary-color;
+		}
+	}
+}
+
+@if $bsx-button-info-color {
+	.badge-info {
+		color: $bsx-button-info-color;
+	}
+	a.badge-info {
+		@include bsx-hover-focus {
+			color: $bsx-button-info-color;
+		}
+	}
+}

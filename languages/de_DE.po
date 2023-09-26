@@ -1,0 +1,392 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#: template-parts/header/header.php:81
+msgid "Menu"
+msgstr "Menü"
+
+#: classes/class-bsx-walker-page.php:242
+msgid "Back"
+msgstr "Zurück"
+
+#: classes/class-bsx-walker-page.php:242
+msgid "Close Menu item"
+msgstr "Menüebene schließen"
+
+#: classes/class-bsx-walker-page.php:245
+msgid "Overview"
+msgstr "Übersicht"
+
+#: header.php:65
+msgid "Skip to main content"
+msgstr "Zum Hauptinhalt springen"
+
+#: footer.php:10
+msgid "To top"
+msgstr "Nach oben"
+
+#: index.php:35
+msgid "Blog Pages Navigation"
+msgstr "Beiträge Seiten Navigation"
+
+#: index.php:35
+msgid "Search Pages Navigation"
+msgstr "Suche Seiten Navigation"
+
+#: index.php:35
+msgid "Older Posts"
+msgstr "Ältere Beiträge"
+
+#: index.php:43
+msgid "Newer Posts"
+msgstr "Neuere Beiträge"
+
+#: index.php:35
+msgid "Previous Page"
+msgstr "Vorherige Seite"
+
+#: index.php:43
+msgid "Next Page"
+msgstr "Nächste Seite"
+
+#: template-parts/content/content-none.php:3
+msgid "No content available"
+msgstr "Kein Inhalt verfügbar"
+
+#: index.php:39
+msgid "Current Posts"
+msgstr "Aktuelle Beiträge"
+
+#: index.php:39
+msgid "Posts (Page %s)"
+msgstr "Weitere Beiträge – Seite %s"
+
+#: functions.php:228 functions.php:246
+msgid "Theme Settings"
+msgstr "Theme Einstellungen"
+
+#: src/libs/data-processing-consen/class-consent-popup-manager.php:68
+msgid "See/change cookie settings"
+msgstr "Cookie-Einstellungen öffnen"
+
+#: 404.php:9
+msgid "Not found"
+msgstr "Seite nicht gefunden"
+
+#: 404.php:11
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Die gewünschte Seite existiert nicht oder nicht mehr. Vielleicht hilft die Suche weiter?"
+
+#: functions.php:420
+msgid "Contact"
+msgstr "Kontakt"
+
+#: functions.php:420
+msgid "Owner name"
+msgstr "Firma / Betreiber"
+
+#: functions.php:420
+msgid "Name 2"
+msgstr "Name 2"
+
+#: functions.php:420
+msgid "Street"
+msgstr "Straße"
+
+#: functions.php:420
+msgid "Street, House Number"
+msgstr "Straße, Nr."
+
+#: functions.php:420
+msgid "Adress Additional"
+msgstr "Adresszusatz"
+
+#: functions.php:420
+msgid "Zip"
+msgstr "PLZ"
+
+#: functions.php:420
+msgid "City"
+msgstr "Ort"
+
+#: functions.php:420
+msgid "Country"
+msgstr "Land"
+
+#: functions.php:420
+msgid "Phone"
+msgstr "Telefon"
+
+#: functions.php:420
+msgid "Email"
+msgstr "E-Mail"
+
+#: functions.php:420
+msgid "Service Phone"
+msgstr "Service-Telefon"
+
+#: functions.php:420
+msgid "Service Email"
+msgstr "Service-E-Mail"
+
+#: functions.php:420
+msgid "Additional URL"
+msgstr "Zusätzliche URL"
+
+#: functions.php:660
+msgid "Page Style"
+msgstr "Seiten-Style"
+
+#: functions.php:677
+msgid "Add space on Page top"
+msgstr "Oben Abstand für Menü zufügen"
+
+#: functions.php:682
+msgid "Wrap Page with Container"
+msgstr "Seite auf Container-Breite begrenzen"
+
+#: functions.php:689 functions.php:806
+msgid "Do not show bottom banner"
+msgstr "Bottom-Banner nicht anzeigen"
+
+#: functions.php:723
+msgid "Meta Data"
+msgstr "Meta-Daten"
+
+#: functions.php:740
+msgid "Title"
+msgstr "Titel"
+
+#: functions.php:745
+msgid "Description"
+msgstr "Beschreibung"
+
+#: functions.php:660
+msgid "Layout"
+msgstr "Layout"
+
+#: functions.php:660
+msgid "Footer Menu Columns Count (0...5)"
+msgstr "Anzahl Footer Menü-Spalten (0...5)"
+
+#: functions.php:660
+msgid "Footer Partner Logo ids (comma separated)"
+msgstr "Footer Partner-Logo IDs (Komma-getrennt)"
+
+#: functions.php:660
+msgid "Show Phone & Email in footer"
+msgstr "E-Mail & Telefon im Footer anzeigen"
+
+#: functions.php:714
+msgid "Use Social Media Brand colors"
+msgstr "Social Media Brand-Farben benutzen"
+
+#: functions.php:724
+msgid "Footer menu names show"
+msgstr "Footer Menü Namen anzeigen"
+
+#: functions.php:747
+msgid "Yes"
+msgstr "Ja"
+
+#: functions.php:106
+msgid "Footer Column 1 Menu"
+msgstr "Footer Spalte 1 Menü"
+
+#: functions.php:107
+msgid "Footer Column 2 Menu"
+msgstr "Footer Spalte 2 Menü"
+
+#: functions.php:108
+msgid "Footer Column 3 Menu"
+msgstr "Footer Spalte 3 Menü"
+
+#: functions.php:109
+msgid "Footer Column 4 Menu"
+msgstr "Footer Spalte 4 Menü"
+
+#: functions.php:110
+msgid "Footer Column 5 Menu"
+msgstr "Footer Spalte 5 Menü"
+
+#: functions.php:111
+msgid "Language switcher"
+msgstr "Sprachumschalter"
+
+#: functions.php:112
+msgid "Footer Bottom Menu"
+msgstr "Footer Bottom-Menü"
+
+#: functions.php:112
+msgid "Consent Popup Menu"
+msgstr "Consent-Popup Menü"
+
+#: functions.php:112
+msgid "Mobile Fixed Menu"
+msgstr "Mobile fixiertes Menü"
+
+#: template-parts/footer/footer.php:24
+msgid "Our partners"
+msgstr "Unsere Partner"
+
+#: template-parts/footer/consent-popup.php:38
+msgid "Please help us to improve our products and our website by accepting our data processing. Thank you!"
+msgstr "Mit deiner Zustimmung zur Datenverarbeitung hilfst Du uns, unsere Produkte und unsere Webseite weiter zu verbessern. Danke!"
+
+#: template-parts/footer/consent-popup.php.php:92
+msgid "Save"
+msgstr "Speichern"
+
+#: template-parts/footer/consent-popup.php.php:96
+msgid "Reject all"
+msgstr "Alle ablehnen"
+
+#: template-parts/footer/consent-popup.php.php:96
+msgid "Allow all"
+msgstr "Alle erlauben"
+
+#: template-parts/footer/consent-popup.php.php:66
+msgid "Essential"
+msgstr "Technisch notwendig"
+
+#: template-parts/footer/consent-popup.php.php:6
+msgid "Analytics"
+msgstr "Analyse"
+
+#: template-parts/footer/consent-popup.php.php:6
+msgid "Internal analytics (no third party)"
+msgstr "Interne Analyse (keine Dritten)"
+
+#: template-parts/content-single.php:39
+msgid "from"
+msgstr "von"
+
+#: template-parts/content-single.php:83
+msgid "Share"
+msgstr "Teilen"
+
+#: template-parts/content-single.php:89
+msgid "Share on"
+msgstr "Teilen auf"
+
+#: template-parts/content-single.php:101
+msgid "Share via Email"
+msgstr "Teilen per E-Mail"
+
+#: template-parts/banner/popular-posts.php:23
+msgid "Popular Posts"
+msgstr "Beliebte Beiträge"
+
+#: template-parts/banner/popular-posts.php:56
+msgid "No Popular Posts available"
+msgstr "Aktuell sind keine beliebten Beiträge verfügbar"
+
+#: src/libs/form/class-bsx-mail.form-php:148
+msgid "Send"
+msgstr "Senden"
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "First Name"
+msgstr "Vorname"
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "Last Name"
+msgstr "Nachname"
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "Company"
+msgstr "Firma"
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "Buy now"
+msgstr "Kostenpflichtig bestellen"
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "Human verification"
+msgstr "Ich bin kein Roboter"
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "Mandatory field"
+msgstr "Pflichtfeld"
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "Please fill this field."
+msgstr "Bitte dieses Feld ausfüllen."
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "Please provide a valid e-mail."
+msgstr "Bitte eine gültige E-Mail eingeben."
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "Subject"
+msgstr "Betreff"
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "Message"
+msgstr "Nachricht"
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "Notes"
+msgstr "Anmerkungen"
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "Load other security code"
+msgstr "Anderen Sicherheitscode laden"
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "Thank you. Your message has been sent successfully."
+msgstr "Vielen Dank. Deine Nachricht wurde erfolgreich gesendet."
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "Something went wrong while trying to send email."
+msgstr "Beim Versuch die Nachricht zu senden ist ein Fehler aufgetreten."
+
+#: src/libs/form/class-bsx-mail-form.php:97
+msgid "Your data is invalid or you are not allowed to access this server."
+msgstr "Deine Daten sind ungültig oder du hast keine Berechtigung, auf diesen Server zuzugreifen."
+
+#: functions.php:1324
+msgid "Error 404"
+msgstr "Fehler 404"
+
+#: functions.php:1318
+msgid "Search"
+msgstr "Suche"
+
+#. translators: %s: Search term.
+#: template-parts/content/content-none.php:22 search.php:21
+msgid "Results for \"%s\""
+msgstr "Suchergebnisse für „%s“"
+
+#. translators: %d: The number of search results.
+#: search.php:33
+msgid "We found %d result for your search."
+msgid_plural "We found %d results for your search."
+msgstr[0] "Es gibt %d Ergebnis für deine Suche."
+msgstr[1] "Es gibt %d Ergebnisse für deine Suche."
+
+#: template-parts/header/header.php:92
+msgid "Login"
+msgstr "Login"
+
+#: inc/references/custom-post-type.php:11
+msgid "References"
+msgstr "Referenzen"
+
+#: inc/references/custom-post-type.php:12
+msgid "Reference"
+msgstr "Referenz"
+
+#: form data
+msgid "Contact details"
+msgstr "Kontaktdaten"

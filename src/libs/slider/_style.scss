@@ -1,0 +1,216 @@
+@import "./../../../node_modules/owl.carousel/src/scss/owl.carousel.scss";
+@import "./../../../node_modules/owl.carousel/src/scss/owl.theme.default.scss";
+
+
+// var
+
+
+$nav-color:             rgba($black, 0.8) !default;
+$nav-color-hover:       $black !default;
+
+$nav-background:        rgba($white, 0.6) !default;
+$nav-background-hover:  rgba($white, 0.85) !default;
+
+$dot-margin:      0 !default;
+
+$owl-nav-button-pt:     0.25em !default;
+$owl-nav-button-px:     0.5em !default;
+
+$owl-nav-icon-lg-font-size:   1.5em !default;
+$owl-nav-icon-lg-line-height: 1.5 !default;
+
+$owl-nav-top-t:     1em !default;
+
+$owl-dot-margin:    5px !default;
+
+
+// fadeout
+$bsx-slider-fadeout-zindex:           1 !default;
+$bsx-slider-fadeout-width:            3rem !default;
+$bsx-slider-fadeout-color:            $body-bg !default;
+$bsx-slider-fadeout-left-gradient:    "linear-gradient(to right, #{$bsx-slider-fadeout-color} 0%,transparent 100%)" !default;
+$bsx-slider-fadeout-right-gradient:   "linear-gradient(to left, #{$bsx-slider-fadeout-color} 0%,transparent 100%)" !default;
+
+
+
+// INFO
+//
+// for default style use: .owl-carousel.owl-theme.styled-nav (on slider element)
+// if using bootstrap classes on nav, use: .is-prev .is-next (on nav additional to e.g. .btn.btn-primary)
+
+
+// style
+
+
+// catch margin
+.bsx-slider-wrapper:after {
+  content: "";
+  display: table;
+}
+
+
+// keep space for dots
+.owl-theme {
+  margin-bottom: 30px;
+}
+
+// nav
+.owl-nav,
+.owl-dots {
+  position: absolute;
+  width: 100%;
+}
+.owl-carousel {
+
+  .owl-nav {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    margin: 0;
+
+    button.owl-prev,
+    button.owl-next,
+    button.is-prev,
+    button.is-next {
+      position: absolute;
+      display: inline-block;
+      transform: translate(0, -50%);
+    }
+
+    .owl-prev,
+    .is-prev {
+      left: 0;
+    }
+    .owl-next,
+    .is-next {
+      right: 0;
+    }
+  }
+
+  // background, color, border-radius
+  &.styled-nav {
+
+    button.owl-prev,
+    button.owl-next {
+      background-color: $nav-background;
+      padding: $owl-nav-button-pt $owl-nav-button-px !important; // override owl !important rule
+    }
+
+    .owl-prev {
+      border-radius: 0 $bsx-btn-border-radius $bsx-btn-border-radius 0;
+    }
+    .owl-next {
+      border-radius: $bsx-btn-border-radius 0 0 $bsx-btn-border-radius;
+    }
+  }
+
+  &.outer-nav {
+    .owl-nav {
+      .owl-prev,
+      .is-prev {
+        left: -$bsx-grid-gutter-width / 2;
+      }
+      .owl-next,
+      .is-next {
+        right: -$bsx-grid-gutter-width / 2;
+      }
+
+      @include media-breakpoint-down(sm) {
+        .owl-prev,
+        .is-prev {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+        .owl-next,
+        .is-next {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+
+  }
+
+  .owl-dots {
+    padding-top: 10px;
+  }
+
+  .owl-item {
+
+    img {
+      display: inline-block;
+      width: auto;
+    }
+  }
+}
+
+.owl-carousel.nav-lg {
+  .owl-nav .fa {
+      font-size: $owl-nav-icon-lg-font-size;
+      line-height: $owl-nav-icon-lg-line-height;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .owl-carousel.nav-top-xs-down {
+    .owl-nav {
+        top: $owl-nav-top-t;
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .owl-carousel.nav-top-sm-down {
+    .owl-nav {
+        top: $owl-nav-top-t;
+    }
+  }
+}
+
+.owl-theme .owl-nav {
+  margin-top: 0;
+
+  [class*="owl-"] {
+    margin: 0;
+  }
+}
+
+.owl-dot > span {
+  margin: $owl-dot-margin;
+}
+
+// dots hidden (since disable dots may cause problems)
+.dots-hidden .owl-dots {
+  display: none;
+}
+
+// FIX
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 1;
+}
+
+
+
+// fadeout
+
+.bsx-slider-fadeout {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: $bsx-slider-fadeout-zindex;
+      display: block;
+      top: 0;
+      height: 100%;
+      width: $bsx-slider-fadeout-width;
+    }
+
+    &:before {
+      left: 0;
+      background-image: #{$bsx-slider-fadeout-left-gradient};
+    }
+    &:after {
+      right: 0;
+      background-image: #{$bsx-slider-fadeout-right-gradient};
+    }
+}

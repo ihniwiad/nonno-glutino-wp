@@ -1,0 +1,34 @@
+
+
+
+.heading-inherit-text {
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: inherit;
+  }
+}
+
+.heading-inherit-font-weight {
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: inherit;
+  }
+}
+
+p + h2,
+p + h3,
+p + h4,
+.p + h2,
+.p + h3,
+.p + h4,
+ul + h2,
+ul + h3,
+ul + h4,
+hr + h2,
+hr + h3,
+hr + h4,
+[class*="bsx-blocks-wrapper"] + h2,
+[class*="bsx-blocks-wrapper"] + h3,
+[class*="bsx-blocks-wrapper"] + h4 {
+	margin-top: $bsx-following-headings-margin-top;
+}

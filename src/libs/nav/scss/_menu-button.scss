@@ -1,0 +1,116 @@
+// make selected menu item look like button
+
+
+// var
+
+$bsx-menu-button-item-selector: 	"" !default;
+
+$bsx-menu-button-item-a-color:					$white !default;
+$bsx-menu-button-item-a-hover-color:			$white !default;
+$bsx-menu-button-item-a-bg-color:				$primary !default;
+$bsx-menu-button-item-a-hover-bg-color:			darken($primary, 10%) !default; // TODO
+
+
+$bsx-menu-button-item-desktop-a-z-index:				2 !default;
+$bsx-menu-button-item-desktop-a-px:						$bsx-appnav-link-px*2 !default;
+$bsx-menu-button-item-desktop-a-pseudo-content:			"\00a0" !default;
+$bsx-menu-button-item-desktop-a-pseudo-dx:				$bsx-appnav-link-px !default;
+$bsx-menu-button-item-desktop-a-pseudo-py:				$bsx-appnav-link-py/2 !default;
+$bsx-menu-button-item-desktop-a-pseudo-z-index:			-1 !default;
+$bsx-menu-button-item-desktop-a-pseudo-border-radius:	$bsx-border-radius !default;
+
+
+
+
+// style
+
+@if $bsx-menu-button-item-selector != "" {
+
+	.bsx-main-navbar-nav {
+
+		#{$bsx-menu-button-item-selector} {
+
+			// all (mobile & desktop)
+
+			> a {
+				color: $bsx-menu-button-item-a-color !important; // override stronger selector
+
+				@include bsx-hover-focus {
+					color: $bsx-menu-button-item-a-hover-color !important; // override stronger selector
+				}
+			}
+
+
+			// mobile only
+
+			@include bsx-appnav-navigation(mobile) {
+
+				> a {
+					background-color: $bsx-menu-button-item-a-bg-color;
+
+					// hover, focus, active, .active
+					@include bsx-hover-focus {
+						background-color: $bsx-menu-button-item-a-hover-bg-color;
+					}
+				}
+
+				// active item
+				&.active > a {
+					background-color: $bsx-menu-button-item-a-hover-bg-color !important; // override stronger selector
+				}
+				
+			}
+
+
+			// desktop only
+
+			@include bsx-appnav-navigation(desktop) {
+
+				> a {
+					position: relative;
+					z-index: $bsx-menu-button-item-desktop-a-z-index;
+					padding-left: $bsx-menu-button-item-desktop-a-px;
+					padding-right: $bsx-menu-button-item-desktop-a-px;
+
+					&:after {
+						content: $bsx-menu-button-item-desktop-a-pseudo-content;
+						position: absolute;
+						z-index: $bsx-menu-button-item-desktop-a-pseudo-z-index;
+						display: block;
+						left: $bsx-menu-button-item-desktop-a-pseudo-dx;
+						right: $bsx-menu-button-item-desktop-a-pseudo-dx;
+						padding-top: $bsx-menu-button-item-desktop-a-pseudo-py;
+						padding-bottom: $bsx-menu-button-item-desktop-a-pseudo-py;
+						background-color: $bsx-menu-button-item-a-bg-color;
+						border-radius: $bsx-menu-button-item-desktop-a-pseudo-border-radius;
+
+					}
+
+					> span::before {
+						content: unset !important;
+						display: none !important;
+					}
+
+					// hover, focus
+					@include bsx-hover-focus {
+						&:after {
+							background-color: $bsx-menu-button-item-a-hover-bg-color;
+						}
+					}
+
+				}
+
+				// active item
+				&.active > a {
+					&:after {
+						background-color: $bsx-menu-button-item-a-hover-bg-color;
+					}
+				}
+
+			}
+
+		}
+
+	}
+	
+}

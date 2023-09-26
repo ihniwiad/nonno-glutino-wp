@@ -1,0 +1,28 @@
+// spacer for missing lang toggle on mobile
+
+
+
+// FAQ TABLE
+
+.faq-table {
+
+	table {
+		background: $ci-light-block-bg;
+	}
+
+	@media (min-width: 400px) {
+		th {
+			white-space: nowrap;
+		}
+	}
+}
+
+
+
+
+
+@include bsx-appnav-navigation(mobile) {
+  .bsx-lang-toggle-spacer {
+    padding-right: 53px;
+  }
+}

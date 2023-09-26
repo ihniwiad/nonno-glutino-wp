@@ -1,0 +1,314 @@
+/*
+
+// COLORS
+
+
+$info: #e8fcf4 !default;
+
+// darken text primary color
+$bsx-text-primary: 		darken($ci-color-1, 10%) !default; //  darken text primary
+$link-color:            $bsx-text-primary !default;
+
+
+// ci light color (nav hover, footer, ...) 
+$ci-light-color: #f0f0f0 !default;
+
+
+
+
+
+// FONT 
+
+$line-height-base:        		1.8 !default;
+
+
+
+*/
+/*
+
+// NAV
+
+// main ul
+//$bsx-appnav-main-navbar-desktop-margin: 	0 0 0 auto !default;
+
+// brand
+//$bsx-appnav-navbar-brand-padding:			1.75rem .75rem !default;
+
+// dropdown
+//$bsx-dropdown-min-width: 					15rem !default;
+
+// link 
+$bsx-appnav-link-px:							.9em !default;
+$bsx-appnav-desktop-level-1-link-lg-down-px:  	.6em !default;
+$bsx-appnav-link-py:							.65em !default;
+$bsx-appnav-desktop-level-1-link-py:			1.25rem !default;
+//$bsx-appnav-quickstart-inverse-color:			$bsx-text-primary !default;
+// link hover color = dropdown color
+//$bsx-appnav-quickstart-dropdown-bg-color: 				$ci-light-color !default; // mobile 
+//$bsx-appnav-nav-desktop-level-1-hover-link-bg-color: 	$ci-light-color !default; // desktop
+
+// remove desktop active nav item underline
+$bsx-appnav-desktop-level-1-active-link-underline-height: 	0 !default;
+
+
+
+
+
+// active link underline
+$bsx-appnav-desktop-level-1-active-link-underline-height:		0.2em !default;
+$bsx-appnav-desktop-level-1-active-link-underline-bottom:		$bsx-appnav-desktop-level-1-link-py * 0.8 !default;
+
+// link font
+$bsx-appnav-basic-font-weight:					500 !default;
+
+// navbar container (depends on link padding)
+$bsx-appnav-navbar-container-desktop-padding-left:   $bsx-appnav-link-px !default;
+$bsx-appnav-navbar-container-desktop-padding-right:  $bsx-appnav-link-px !default;
+
+// brand
+$bsx-appnav-navbar-logo-max-width: 				unset !default;
+
+*/
+/*
+
+
+
+// BUTTON / BADGE
+
+$bsx-button-primary-color: $white !default;
+$bsx-button-light-color: $primary !default;
+$bsx-button-info-color: $bsx-text-primary !default;
+
+*/
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  color: transparent;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.bsx-appnav-navbar-nav ul {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .bsx-appnav-desktop-hidden {
+    display: none !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .bsx-appnav-mobile-hidden {
+    display: none !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .bsx-appnav-navbar-toggler {
+    position: relative;
+    box-sizing: content-box;
+    min-width: 2rem;
+    min-height: 1.25em;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+    color: transparent;
+  }
+  .bsx-appnav-navbar-toggler::before {
+    content: "";
+    position: absolute;
+    left: 0.66667em;
+    right: 0.66667em;
+    height: 1.25em;
+    margin-top: 0.125em;
+    background: #dee2e6;
+    border-radius: 0.625em;
+  }
+}
+@media (min-width: 992px) {
+  .bsx-appnav-navbar-toggler {
+    display: none;
+  }
+}
+.bsx-appnav-navbar-brand {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.33rem 0.75rem;
+  align-items: center;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+  max-width: 150px;
+}
+.bsx-appnav-navbar-brand:hover, .bsx-appnav-navbar-brand:focus {
+  text-decoration: none;
+}
+.bsx-appnav-navbar-brand img,
+.bsx-appnav-navbar-brand svg {
+  max-width: unset;
+  height: auto;
+}
+
+.bsx-appnav-navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(53, 40, 29, 0.94);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 0 15px 0 rgba(255, 255, 255, 0.05);
+}
+.bsx-appnav-navbar.bsx-appnav-fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+@media (max-width: 991.98px) {
+  .bsx-appnav-navbar {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .bsx-appnav-navbar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .bsx-appnav-navbar .bsx-appnav-navbar-nav {
+    flex-direction: row;
+  }
+}
+.bsx-appnav-navbar-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 991.98px) {
+  .bsx-appnav-navbar-collapse {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .bsx-appnav-navbar-collapse {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+.bsx-appnav-navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.bsx-appnav-navbar-nav li a {
+  display: block;
+  padding: 0.66667em 0.66667em;
+  text-decoration: none;
+}
+.bsx-appnav-navbar-nav > li > a {
+  position: relative;
+  min-width: 2rem;
+  min-height: 1.25em;
+  color: transparent;
+}
+@media (min-width: 992px) {
+  .bsx-appnav-navbar-nav > li > a {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+.bsx-appnav-navbar-nav > li > a::before {
+  content: "";
+  position: absolute;
+  left: 0.66667em;
+  right: 0.66667em;
+  height: 1.25em;
+  margin-top: 0.125em;
+  background: #dee2e6;
+  border-radius: 0.625em;
+}
+
+@media (min-width: 992px) {
+  .bsx-appnav-navbar-nav.bsx-main-navbar-nav {
+    margin: 0 auto 0 0;
+  }
+}
+.bsx-appnav-navbar-nav.bsx-allmedia-dropdown-nav {
+  display: inline-flex;
+  flex-direction: row;
+}
+.bsx-appnav-navbar-nav.bsx-allmedia-dropdown-nav > li > a {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bsx-banner,
+[class*=banner-]:not(.banner-inner) {
+  background-color: #dee2e6;
+}
+
+.banner-1 {
+  min-height: 26rem;
+}
+
+.banner-2 {
+  min-height: 22rem;
+}
+
+.banner-3 {
+  min-height: 18rem;
+}
+
+.banner-4 {
+  min-height: 15rem;
+}
+
+.banner-5 {
+  min-height: 13rem;
+}
+
+.banner-6 {
+  min-height: 11rem;
+}
+
+@media (min-width: 768px) {
+  .banner-1 {
+    min-height: 36rem;
+  }
+  .banner-2 {
+    min-height: 30rem;
+  }
+  .banner-3 {
+    min-height: 24rem;
+  }
+  .banner-4 {
+    min-height: 18rem;
+  }
+}
+/*# sourceMappingURL=atf.css.map */
