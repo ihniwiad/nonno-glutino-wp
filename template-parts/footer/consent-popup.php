@@ -54,7 +54,7 @@ if ( class_exists( 'Consent_Popup_Manager' ) ) {
                 -->
                 <button class="btn btn-outline-primary btn-sm mr-2" data-fn="cookie-related-elem-close" data-g-fn="reject-all"><?php echo esc_html__( 'Reject all', 'bsx-wordpress' ); ?></button><!--
 
-                --><button class="btn btn-primary btn-sm" data-fn="cookie-related-elem-close" data-g-fn="allow-all"><?php echo esc_html__( 'Allow all', 'bsx-wordpress' ); ?></button>
+                --><button class="btn btn-secondary btn-sm" data-fn="cookie-related-elem-close" data-g-fn="allow-all"><?php echo esc_html__( 'Allow all', 'bsx-wordpress' ); ?></button>
               </div>
 
             </form>

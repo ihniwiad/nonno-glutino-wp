@@ -28,12 +28,6 @@ $line-height-base:        		1.8 !default;
 
 // NAV
 
-// main ul
-//$bsx-appnav-main-navbar-desktop-margin: 	0 0 0 auto !default;
-
-// brand
-//$bsx-appnav-navbar-brand-padding:			1.75rem .75rem !default;
-
 // dropdown
 //$bsx-dropdown-min-width: 					15rem !default;
 
@@ -148,12 +142,12 @@ body {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  padding: 0.33rem 0.75rem;
+  padding: 0.75rem 1rem;
   align-items: center;
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
-  max-width: 150px;
+  max-width: 185px;
 }
 .bsx-appnav-navbar-brand:hover, .bsx-appnav-navbar-brand:focus {
   text-decoration: none;
@@ -167,7 +161,7 @@ body {
 .bsx-appnav-navbar {
   padding-top: 0;
   padding-bottom: 0;
-  background-color: rgba(53, 40, 29, 0.94);
+  background-color: rgba(29, 22, 16, 0.94);
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 0 15px 0 rgba(255, 255, 255, 0.05);
 }
 .bsx-appnav-navbar.bsx-appnav-fixed-top {
@@ -252,7 +246,7 @@ body {
 
 @media (min-width: 992px) {
   .bsx-appnav-navbar-nav.bsx-main-navbar-nav {
-    margin: 0 auto 0 0;
+    margin: 0 auto 0 auto;
   }
 }
 .bsx-appnav-navbar-nav.bsx-allmedia-dropdown-nav {

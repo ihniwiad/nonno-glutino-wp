@@ -166,6 +166,36 @@ function add_additional_class_on_a( $atts, $item, $args ) {
 }
 add_filter( 'nav_menu_link_attributes', 'add_additional_class_on_a', 10, 3 );
 
+// add filter to add html content to a elem
+function add_additional_content_in_a( $title, $item, $args ) {
+    if ( isset( $args->add_title_content ) ) {
+
+        // echo '<pre style="width: 100%; overflow: auto;">';
+        // print_r( $item );
+        // echo '</pre>';
+
+        $content = $args->add_title_content;
+
+        // insert description where contains '%description$s'
+        if ( strpos( $content, '%description$s' ) !== false ) {
+            $content = str_replace( '%description$s', $item->description, $content );
+        }
+
+        // insert title where contains '%title$s'
+        if ( strpos( $content, '%title$s' ) !== false ) {
+            $title = str_replace( '%title$s', $title, $content );
+        }
+        else {
+            $title = $content . ' ' . $title;
+        }
+
+
+    }
+    return $title;
+}
+add_filter( 'nav_menu_item_title', 'add_additional_content_in_a', 10, 3 );
+
+
 
 /**
  * disable emoji

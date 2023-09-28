@@ -9,11 +9,12 @@ $ci-border-color: #E0E0E0 !default;
 $ci-light-block-bg: #f8f8f8 !default;
 
 $primary: $ci-color-1 !default;
-$secondary: $ci-color-2 !default;
+$secondary: #FFB649 !default;
+$info: $ci-color-2 !default;
 $light: $ci-light-block-bg !default;
+$dark: darken($ci-color-2, 15) !default;
 $white: #ffffff !default;
-$dark: $ci-color-2 !default;
-$darker: darken($ci-color-2, 7.5) !default;
+$black: #000000 !default;
 
 $warning: #FFD768 !default;
 $danger: #FF3803 !default;
@@ -23,8 +24,8 @@ $text-muted: #999999 !default;
 $border-color: $ci-border-color !default;
 
 
-$body-bg: $ci-color-2 !default;
-$body-color: $white !default;
+$body-bg: darken($ci-color-2, 50) !default;
+$body-color: rgba($white, .8) !default;
 $headings-color: darken($white, 10) !default;
 
 
@@ -68,21 +69,26 @@ $bsx-line-label-text-transform: uppercase !default;
 
 // NAV
 
-$bsx-appnav-navbar-bg-color:				rgba($darker, 0.94) !default; // header
+$bsx-appnav-navbar-bg-color:				rgba($dark, 0.94) !default; // header
 
-$bsx-appnav-navbar-brand-max-width:			150px !default;
+// main ul
 
-$bsx-appnav-quickstart-bg-color: 			$darker !default;
+// dektop only
+$bsx-appnav-main-navbar-desktop-margin: 	0 auto 0 auto !default;
 
-$bsx-appnav-quickstart-color: 				$white !default;
+$bsx-appnav-navbar-brand-max-width:			185px !default;
+
+$bsx-appnav-quickstart-bg-color: 			$info !default;
+
+$bsx-appnav-quickstart-color: 				$secondary !default;
 $bsx-appnav-quickstart-inverse-color: 		$white !default;
 $bsx-appnav-quickstart-highlight-color: 	$white !default;
 
-$bsx-appnav-quickstart-bg-color: 			$dark !default;
-$bsx-appnav-quickstart-dropdown-bg-color: 	$dark !default;
+$bsx-appnav-quickstart-bg-color: 			$info !default;
+$bsx-appnav-quickstart-dropdown-bg-color: 	$info !default;
 $bsx-appnav-mobile-collapse-bg-color:		$bsx-appnav-quickstart-dropdown-bg-color !default; // mobile nav background
 
-$bsx-appnav-nav-desktop-level-1-hover-link-bg-color:        $dark !default; // desktop level 1 hover bg color (equal desktop dropdown bg 
+$bsx-appnav-nav-desktop-level-1-hover-link-bg-color:        $info !default; // desktop level 1 hover bg color (equal desktop dropdown bg 
 
 $bsx-appnav-navbar-box-shadow:				0 1px 0 0 rgba(255, 255, 255, 0.1), 0 0 15px 0 rgba(255, 255, 255, 0.05) !default;
 
@@ -98,15 +104,15 @@ $bsx-appnav-quickstart-mobile-link-border-color: 	rgba($bsx-appnav-quickstart-co
 $bsx-appnav-desktop-level-1-link-py:			1.5rem !default;
 // $bsx-appnav-quickstart-inverse-color:			$bsx-text-primary !default;
 
+
+// brand
+$bsx-appnav-navbar-brand-padding:			.75rem 1rem !default;
+
+
+
 /*
 
 // NAV
-
-// main ul
-//$bsx-appnav-main-navbar-desktop-margin: 	0 0 0 auto !default;
-
-// brand
-//$bsx-appnav-navbar-brand-padding:			1.75rem .75rem !default;
 
 // dropdown
 //$bsx-dropdown-min-width: 					15rem !default;
@@ -185,6 +191,6 @@ $bsx-acc-content-inner-background:	$ci-light-block-bg !default;
 
 // footer
 
-$bsx-footer-bg-color:         $darker !default;
+$bsx-footer-bg-color:         $dark !default;
 
 
