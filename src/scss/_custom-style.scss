@@ -17,7 +17,7 @@
 
 .rtb-booking-form {
 
-	// col
+	// row
 	form > fieldset {
 		display: flex;
 		flex-wrap: wrap;
@@ -25,16 +25,20 @@
 		margin-left: calc($grid-gutter-width / -2);
 	}
 
-	// col
-	fieldset > * {
+	// col 12
+	fieldset > *,
+	fieldset > legend {
 		position: relative;
 		width: 100%;
 		padding-right: calc($grid-gutter-width / 2);
 		padding-left: calc($grid-gutter-width / 2);
 	}
-	legend ~ div[class^="rtb-"] {
-		flex: 0 0 33.3333333333%;
-		max-width: 33.3333333333%;
+	@include media-breakpoint-up(sm) {
+		// col 4
+		legend ~ div[class^="rtb-"] {
+			flex: 0 0 33.3333333333%;
+			max-width: 33.3333333333%;
+		}
 	}
 
 	// controls
@@ -43,6 +47,13 @@
 	textarea {
 		width: 100%;
 		max-width: unset !important;
+		@extend .form-control;
+	}
+
+	[type="submit"] {
+		@extend .btn;
+		@extend .btn-primary;
+		@extend .btn-lg;
 	}
 
 }

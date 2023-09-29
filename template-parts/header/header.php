@@ -10,9 +10,9 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
     <?php
         // add spacer .bsx-lang-toggle-spacer if not having lang nav or login
     ?>
-    <nav class="bsx-appnav-navbar-container container">
+    <nav class="bsx-appnav-navbar-container container pl-0 pl-md-3 pr-5 pr-md-3">
 
-        <button class="bsx-appnav-navbar-toggler" id="toggle-navbar-collapse" type="button" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" data-fn="toggle" data-fn-options="{ bodyOpenedClass: 'nav-open' }" data-fn-target="[data-tg='navbar-collapse']" data-tg="dropdown-multilevel-excluded">
+        <button class="bsx-appnav-navbar-toggler px-3" id="toggle-navbar-collapse" type="button" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" data-fn="toggle" data-fn-options="{ bodyOpenedClass: 'nav-open' }" data-fn-target="[data-tg='navbar-collapse']" data-tg="dropdown-multilevel-excluded">
             <span class="sr-only"><?php echo __( 'Menu', 'bsx-wordpress' ); ?></span>
             <i class="fa fa-navicon" aria-hidden="true"></i>
         </button>

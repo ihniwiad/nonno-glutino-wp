@@ -10616,7 +10616,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 182, 73, 0.5);
   text-align: left;
   background-color: black;
 }
@@ -12067,7 +12067,7 @@ pre code {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 182, 73, 0.5);
 }
 .table th,
 .table td {
@@ -12112,7 +12112,7 @@ pre code {
 }
 
 .table-hover tbody tr:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 182, 73, 0.5);
   background-color: rgba(0, 0, 0, 0.075);
 }
 
@@ -12375,7 +12375,9 @@ pre code {
   border: 0;
 }
 
-.form-control {
+.form-control, .rtb-booking-form input,
+.rtb-booking-form select,
+.rtb-booking-form textarea {
   display: block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
@@ -12391,52 +12393,70 @@ pre code {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control {
+  .form-control, .rtb-booking-form input,
+  .rtb-booking-form select,
+  .rtb-booking-form textarea {
     transition: none;
   }
 }
-.form-control::-ms-expand {
+.form-control::-ms-expand, .rtb-booking-form input::-ms-expand,
+.rtb-booking-form select::-ms-expand,
+.rtb-booking-form textarea::-ms-expand {
   background-color: transparent;
   border: 0;
 }
-.form-control:-moz-focusring {
+.form-control:-moz-focusring, .rtb-booking-form input:-moz-focusring,
+.rtb-booking-form select:-moz-focusring,
+.rtb-booking-form textarea:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #495057;
 }
-.form-control:focus {
+.form-control:focus, .rtb-booking-form input:focus,
+.rtb-booking-form select:focus,
+.rtb-booking-form textarea:focus {
   color: #495057;
   background-color: #ffffff;
   border-color: white;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(255, 231, 183, 0.25);
 }
-.form-control::-moz-placeholder {
+.form-control::-moz-placeholder, .rtb-booking-form input::-moz-placeholder, .rtb-booking-form select::-moz-placeholder, .rtb-booking-form textarea::-moz-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:-ms-input-placeholder {
+.form-control:-ms-input-placeholder, .rtb-booking-form input:-ms-input-placeholder, .rtb-booking-form select:-ms-input-placeholder, .rtb-booking-form textarea:-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::placeholder {
+.form-control::placeholder, .rtb-booking-form input::placeholder,
+.rtb-booking-form select::placeholder,
+.rtb-booking-form textarea::placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:disabled, .form-control[readonly] {
+.form-control:disabled, .rtb-booking-form input:disabled,
+.rtb-booking-form select:disabled,
+.rtb-booking-form textarea:disabled, .form-control[readonly], .rtb-booking-form input[readonly],
+.rtb-booking-form select[readonly],
+.rtb-booking-form textarea[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
 
-input[type=date].form-control,
+input[type=date].form-control, .rtb-booking-form input[type=date],
 input[type=time].form-control,
+.rtb-booking-form input[type=time],
 input[type=datetime-local].form-control,
-input[type=month].form-control {
+.rtb-booking-form input[type=datetime-local],
+input[type=month].form-control,
+.rtb-booking-form input[type=month] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 
-select.form-control:focus::-ms-value {
+select.form-control:focus::-ms-value,
+.rtb-booking-form select:focus::-ms-value {
   color: #495057;
   background-color: #ffffff;
 }
@@ -12476,7 +12496,7 @@ select.form-control:focus::-ms-value {
   margin-bottom: 0;
   font-size: 1rem;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 182, 73, 0.5);
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0;
@@ -12502,11 +12522,14 @@ select.form-control:focus::-ms-value {
   border-radius: 0.3rem;
 }
 
-select.form-control[size], select.form-control[multiple] {
+select.form-control[size],
+.rtb-booking-form select[size], select.form-control[multiple],
+.rtb-booking-form select[multiple] {
   height: auto;
 }
 
-textarea.form-control {
+textarea.form-control,
+.rtb-booking-form textarea {
   height: auto;
 }
 
@@ -12597,7 +12620,13 @@ textarea.form-control {
   display: block;
 }
 
-.was-validated .form-control:valid, .form-control.is-valid {
+.was-validated .form-control:valid, .was-validated .rtb-booking-form input:valid, .rtb-booking-form .was-validated input:valid,
+.was-validated .rtb-booking-form select:valid,
+.rtb-booking-form .was-validated select:valid,
+.was-validated .rtb-booking-form textarea:valid,
+.rtb-booking-form .was-validated textarea:valid, .form-control.is-valid, .rtb-booking-form input.is-valid,
+.rtb-booking-form select.is-valid,
+.rtb-booking-form textarea.is-valid {
   border-color: #4cad33;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%234cad33' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
@@ -12605,12 +12634,21 @@ textarea.form-control {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:valid:focus, .form-control.is-valid:focus {
+.was-validated .form-control:valid:focus, .was-validated .rtb-booking-form input:valid:focus, .rtb-booking-form .was-validated input:valid:focus,
+.was-validated .rtb-booking-form select:valid:focus,
+.rtb-booking-form .was-validated select:valid:focus,
+.was-validated .rtb-booking-form textarea:valid:focus,
+.rtb-booking-form .was-validated textarea:valid:focus, .form-control.is-valid:focus, .rtb-booking-form input.is-valid:focus,
+.rtb-booking-form select.is-valid:focus,
+.rtb-booking-form textarea.is-valid:focus {
   border-color: #4cad33;
   box-shadow: 0 0 0 0.2rem rgba(76, 173, 51, 0.25);
 }
 
-.was-validated textarea.form-control:valid, textarea.form-control.is-valid {
+.was-validated textarea.form-control:valid,
+.was-validated .rtb-booking-form textarea:valid,
+.rtb-booking-form .was-validated textarea:valid, textarea.form-control.is-valid,
+.rtb-booking-form textarea.is-valid {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
@@ -12693,7 +12731,13 @@ textarea.form-control {
   display: block;
 }
 
-.was-validated .form-control:invalid, .form-control.is-invalid {
+.was-validated .form-control:invalid, .was-validated .rtb-booking-form input:invalid, .rtb-booking-form .was-validated input:invalid,
+.was-validated .rtb-booking-form select:invalid,
+.rtb-booking-form .was-validated select:invalid,
+.was-validated .rtb-booking-form textarea:invalid,
+.rtb-booking-form .was-validated textarea:invalid, .form-control.is-invalid, .rtb-booking-form input.is-invalid,
+.rtb-booking-form select.is-invalid,
+.rtb-booking-form textarea.is-invalid {
   border-color: #FF3803;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23FF3803' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23FF3803' stroke='none'/%3e%3c/svg%3e");
@@ -12701,12 +12745,21 @@ textarea.form-control {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
+.was-validated .form-control:invalid:focus, .was-validated .rtb-booking-form input:invalid:focus, .rtb-booking-form .was-validated input:invalid:focus,
+.was-validated .rtb-booking-form select:invalid:focus,
+.rtb-booking-form .was-validated select:invalid:focus,
+.was-validated .rtb-booking-form textarea:invalid:focus,
+.rtb-booking-form .was-validated textarea:invalid:focus, .form-control.is-invalid:focus, .rtb-booking-form input.is-invalid:focus,
+.rtb-booking-form select.is-invalid:focus,
+.rtb-booking-form textarea.is-invalid:focus {
   border-color: #FF3803;
   box-shadow: 0 0 0 0.2rem rgba(255, 56, 3, 0.25);
 }
 
-.was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
+.was-validated textarea.form-control:invalid,
+.was-validated .rtb-booking-form textarea:invalid,
+.rtb-booking-form .was-validated textarea:invalid, textarea.form-control.is-invalid,
+.rtb-booking-form textarea.is-invalid {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
@@ -12777,7 +12830,11 @@ textarea.form-control {
     align-items: center;
     margin-bottom: 0;
   }
-  .form-inline .form-control {
+  .form-inline .form-control, .form-inline .rtb-booking-form input, .rtb-booking-form .form-inline input,
+  .form-inline .rtb-booking-form select,
+  .rtb-booking-form .form-inline select,
+  .form-inline .rtb-booking-form textarea,
+  .rtb-booking-form .form-inline textarea {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -12812,10 +12869,10 @@ textarea.form-control {
   }
 }
 
-.btn {
+.btn, .rtb-booking-form [type=submit] {
   display: inline-block;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 182, 73, 0.5);
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -12831,56 +12888,58 @@ textarea.form-control {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn {
+  .btn, .rtb-booking-form [type=submit] {
     transition: none;
   }
 }
-.btn:hover {
-  color: rgba(255, 255, 255, 0.8);
+.btn:hover, .rtb-booking-form [type=submit]:hover {
+  color: rgba(255, 182, 73, 0.5);
   text-decoration: none;
 }
-.btn:focus, .btn.focus {
+.btn:focus, .rtb-booking-form [type=submit]:focus, .btn.focus, .rtb-booking-form .focus[type=submit] {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(255, 231, 183, 0.25);
 }
-.btn.disabled, .btn:disabled {
+.btn.disabled, .rtb-booking-form .disabled[type=submit], .btn:disabled, .rtb-booking-form [type=submit]:disabled {
   opacity: 0.65;
 }
-.btn:not(:disabled):not(.disabled) {
+.btn:not(:disabled):not(.disabled), .rtb-booking-form [type=submit]:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
-a.btn.disabled,
-fieldset:disabled a.btn {
+a.btn.disabled, .rtb-booking-form a.disabled[type=submit],
+fieldset:disabled a.btn,
+fieldset:disabled .rtb-booking-form a[type=submit],
+.rtb-booking-form fieldset:disabled a[type=submit] {
   pointer-events: none;
 }
 
-.btn-primary {
+.btn-primary, .rtb-booking-form [type=submit] {
   color: #212529;
   background-color: #FFE7B7;
   border-color: #FFE7B7;
 }
-.btn-primary:hover {
+.btn-primary:hover, .rtb-booking-form [type=submit]:hover {
   color: #212529;
   background-color: #ffda91;
   border-color: #ffd684;
 }
-.btn-primary:focus, .btn-primary.focus {
+.btn-primary:focus, .rtb-booking-form [type=submit]:focus, .btn-primary.focus, .rtb-booking-form .focus[type=submit] {
   color: #212529;
   background-color: #ffda91;
   border-color: #ffd684;
   box-shadow: 0 0 0 0.2rem rgba(222, 202, 162, 0.5);
 }
-.btn-primary.disabled, .btn-primary:disabled {
+.btn-primary.disabled, .rtb-booking-form .disabled[type=submit], .btn-primary:disabled, .rtb-booking-form [type=submit]:disabled {
   color: #212529;
   background-color: #FFE7B7;
   border-color: #FFE7B7;
 }
-.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+.btn-primary:not(:disabled):not(.disabled):active, .rtb-booking-form [type=submit]:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .rtb-booking-form [type=submit]:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle, .rtb-booking-form .show > .dropdown-toggle[type=submit] {
   color: #212529;
   background-color: #ffd684;
   border-color: #ffd277;
 }
-.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
+.btn-primary:not(:disabled):not(.disabled):active:focus, .rtb-booking-form [type=submit]:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .rtb-booking-form [type=submit]:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus, .rtb-booking-form .show > .dropdown-toggle[type=submit]:focus {
   box-shadow: 0 0 0 0.2rem rgba(222, 202, 162, 0.5);
 }
 
@@ -13311,14 +13370,14 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .rtb-booking-form [type=submit], .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .rtb-booking-form .btn-group-sm > [type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -13402,7 +13461,7 @@ input[type=button].btn-block {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 182, 73, 0.5);
   text-align: left;
   list-style: none;
   background-color: #ffffff;
@@ -13602,19 +13661,24 @@ input[type=button].btn-block {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn,
-.btn-group-vertical > .btn {
+.btn-group > .btn, .rtb-booking-form .btn-group > [type=submit],
+.btn-group-vertical > .btn,
+.rtb-booking-form .btn-group-vertical > [type=submit] {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn:hover,
-.btn-group-vertical > .btn:hover {
+.btn-group > .btn:hover, .rtb-booking-form .btn-group > [type=submit]:hover,
+.btn-group-vertical > .btn:hover,
+.rtb-booking-form .btn-group-vertical > [type=submit]:hover {
   z-index: 1;
 }
-.btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+.btn-group > .btn:focus, .rtb-booking-form .btn-group > [type=submit]:focus, .btn-group > .btn:active, .rtb-booking-form .btn-group > [type=submit]:active, .btn-group > .btn.active, .rtb-booking-form .btn-group > .active[type=submit],
 .btn-group-vertical > .btn:focus,
+.rtb-booking-form .btn-group-vertical > [type=submit]:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
+.rtb-booking-form .btn-group-vertical > [type=submit]:active,
+.btn-group-vertical > .btn.active,
+.rtb-booking-form .btn-group-vertical > .active[type=submit] {
   z-index: 1;
 }
 
@@ -13627,17 +13691,19 @@ input[type=button].btn-block {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child),
+.btn-group > .btn:not(:first-child), .rtb-booking-form .btn-group > [type=submit]:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .rtb-booking-form .btn-group > [type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn,
+.rtb-booking-form .btn-group > .btn-group:not(:last-child) > [type=submit] {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn {
+.btn-group > .btn:not(:first-child), .rtb-booking-form .btn-group > [type=submit]:not(:first-child),
+.btn-group > .btn-group:not(:first-child) > .btn,
+.rtb-booking-form .btn-group > .btn-group:not(:first-child) > [type=submit] {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -13653,12 +13719,12 @@ input[type=button].btn-block {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .rtb-booking-form .btn-group-sm > [type=submit] + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .rtb-booking-form [type=submit] + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -13668,33 +13734,39 @@ input[type=button].btn-block {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn,
+.btn-group-vertical > .btn, .rtb-booking-form .btn-group-vertical > [type=submit],
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .rtb-booking-form .btn-group-vertical > [type=submit]:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group-vertical > .btn-group:not(:last-child) > .btn {
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .rtb-booking-form .btn-group-vertical > [type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn-group:not(:last-child) > .btn,
+.rtb-booking-form .btn-group-vertical > .btn-group:not(:last-child) > [type=submit] {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn:not(:first-child),
-.btn-group-vertical > .btn-group:not(:first-child) > .btn {
+.btn-group-vertical > .btn:not(:first-child), .rtb-booking-form .btn-group-vertical > [type=submit]:not(:first-child),
+.btn-group-vertical > .btn-group:not(:first-child) > .btn,
+.rtb-booking-form .btn-group-vertical > .btn-group:not(:first-child) > [type=submit] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group-toggle > .btn,
-.btn-group-toggle > .btn-group > .btn {
+.btn-group-toggle > .btn, .rtb-booking-form .btn-group-toggle > [type=submit],
+.btn-group-toggle > .btn-group > .btn,
+.rtb-booking-form .btn-group-toggle > .btn-group > [type=submit] {
   margin-bottom: 0;
 }
-.btn-group-toggle > .btn input[type=radio],
+.btn-group-toggle > .btn input[type=radio], .rtb-booking-form .btn-group-toggle > [type=submit] input[type=radio],
 .btn-group-toggle > .btn input[type=checkbox],
+.rtb-booking-form .btn-group-toggle > [type=submit] input[type=checkbox],
 .btn-group-toggle > .btn-group > .btn input[type=radio],
-.btn-group-toggle > .btn-group > .btn input[type=checkbox] {
+.rtb-booking-form .btn-group-toggle > .btn-group > [type=submit] input[type=radio],
+.btn-group-toggle > .btn-group > .btn input[type=checkbox],
+.rtb-booking-form .btn-group-toggle > .btn-group > [type=submit] input[type=checkbox] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -13707,7 +13779,9 @@ input[type=button].btn-block {
   align-items: stretch;
   width: 100%;
 }
-.input-group > .form-control,
+.input-group > .form-control, .rtb-booking-form .input-group > input,
+.rtb-booking-form .input-group > select,
+.rtb-booking-form .input-group > textarea,
 .input-group > .form-control-plaintext,
 .input-group > .custom-select,
 .input-group > .custom-file {
@@ -13717,21 +13791,50 @@ input[type=button].btn-block {
   min-width: 0;
   margin-bottom: 0;
 }
-.input-group > .form-control + .form-control,
+.input-group > .form-control + .form-control, .rtb-booking-form .input-group > input + .form-control,
+.rtb-booking-form .input-group > select + .form-control,
+.rtb-booking-form .input-group > textarea + .form-control, .rtb-booking-form .input-group > .form-control + input, .rtb-booking-form .input-group > input + input,
+.rtb-booking-form .input-group > select + input,
+.rtb-booking-form .input-group > textarea + input,
+.rtb-booking-form .input-group > .form-control + select,
+.rtb-booking-form .input-group > input + select,
+.rtb-booking-form .input-group > select + select,
+.rtb-booking-form .input-group > textarea + select,
+.rtb-booking-form .input-group > .form-control + textarea,
+.rtb-booking-form .input-group > input + textarea,
+.rtb-booking-form .input-group > select + textarea,
+.rtb-booking-form .input-group > textarea + textarea,
 .input-group > .form-control + .custom-select,
+.rtb-booking-form .input-group > input + .custom-select,
+.rtb-booking-form .input-group > select + .custom-select,
+.rtb-booking-form .input-group > textarea + .custom-select,
 .input-group > .form-control + .custom-file,
+.rtb-booking-form .input-group > input + .custom-file,
+.rtb-booking-form .input-group > select + .custom-file,
+.rtb-booking-form .input-group > textarea + .custom-file,
 .input-group > .form-control-plaintext + .form-control,
+.rtb-booking-form .input-group > .form-control-plaintext + input,
+.rtb-booking-form .input-group > .form-control-plaintext + select,
+.rtb-booking-form .input-group > .form-control-plaintext + textarea,
 .input-group > .form-control-plaintext + .custom-select,
 .input-group > .form-control-plaintext + .custom-file,
 .input-group > .custom-select + .form-control,
+.rtb-booking-form .input-group > .custom-select + input,
+.rtb-booking-form .input-group > .custom-select + select,
+.rtb-booking-form .input-group > .custom-select + textarea,
 .input-group > .custom-select + .custom-select,
 .input-group > .custom-select + .custom-file,
 .input-group > .custom-file + .form-control,
+.rtb-booking-form .input-group > .custom-file + input,
+.rtb-booking-form .input-group > .custom-file + select,
+.rtb-booking-form .input-group > .custom-file + textarea,
 .input-group > .custom-file + .custom-select,
 .input-group > .custom-file + .custom-file {
   margin-left: -1px;
 }
-.input-group > .form-control:focus,
+.input-group > .form-control:focus, .rtb-booking-form .input-group > input:focus,
+.rtb-booking-form .input-group > select:focus,
+.rtb-booking-form .input-group > textarea:focus,
 .input-group > .custom-select:focus,
 .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
   z-index: 3;
@@ -13739,7 +13842,9 @@ input[type=button].btn-block {
 .input-group > .custom-file .custom-file-input:focus {
   z-index: 4;
 }
-.input-group > .form-control:not(:first-child),
+.input-group > .form-control:not(:first-child), .rtb-booking-form .input-group > input:not(:first-child),
+.rtb-booking-form .input-group > select:not(:first-child),
+.rtb-booking-form .input-group > textarea:not(:first-child),
 .input-group > .custom-select:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -13752,13 +13857,17 @@ input[type=button].btn-block {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-.input-group:not(.has-validation) > .form-control:not(:last-child),
+.input-group:not(.has-validation) > .form-control:not(:last-child), .rtb-booking-form .input-group:not(.has-validation) > input:not(:last-child),
+.rtb-booking-form .input-group:not(.has-validation) > select:not(:last-child),
+.rtb-booking-form .input-group:not(.has-validation) > textarea:not(:last-child),
 .input-group:not(.has-validation) > .custom-select:not(:last-child),
 .input-group:not(.has-validation) > .custom-file:not(:last-child) .custom-file-label::after {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.input-group.has-validation > .form-control:nth-last-child(n+3),
+.input-group.has-validation > .form-control:nth-last-child(n+3), .rtb-booking-form .input-group.has-validation > input:nth-last-child(n+3),
+.rtb-booking-form .input-group.has-validation > select:nth-last-child(n+3),
+.rtb-booking-form .input-group.has-validation > textarea:nth-last-child(n+3),
 .input-group.has-validation > .custom-select:nth-last-child(n+3),
 .input-group.has-validation > .custom-file:nth-last-child(n+3) .custom-file-label::after {
   border-top-right-radius: 0;
@@ -13769,23 +13878,41 @@ input[type=button].btn-block {
 .input-group-append {
   display: flex;
 }
-.input-group-prepend .btn,
-.input-group-append .btn {
+.input-group-prepend .btn, .input-group-prepend .rtb-booking-form [type=submit], .rtb-booking-form .input-group-prepend [type=submit],
+.input-group-append .btn,
+.input-group-append .rtb-booking-form [type=submit],
+.rtb-booking-form .input-group-append [type=submit] {
   position: relative;
   z-index: 2;
 }
-.input-group-prepend .btn:focus,
-.input-group-append .btn:focus {
+.input-group-prepend .btn:focus, .input-group-prepend .rtb-booking-form [type=submit]:focus, .rtb-booking-form .input-group-prepend [type=submit]:focus,
+.input-group-append .btn:focus,
+.input-group-append .rtb-booking-form [type=submit]:focus,
+.rtb-booking-form .input-group-append [type=submit]:focus {
   z-index: 3;
 }
-.input-group-prepend .btn + .btn,
+.input-group-prepend .btn + .btn, .input-group-prepend .rtb-booking-form [type=submit] + .btn, .rtb-booking-form .input-group-prepend [type=submit] + .btn, .input-group-prepend .rtb-booking-form .btn + [type=submit], .rtb-booking-form .input-group-prepend .btn + [type=submit], .input-group-prepend .rtb-booking-form [type=submit] + [type=submit], .rtb-booking-form .input-group-prepend [type=submit] + [type=submit],
 .input-group-prepend .btn + .input-group-text,
+.input-group-prepend .rtb-booking-form [type=submit] + .input-group-text,
+.rtb-booking-form .input-group-prepend [type=submit] + .input-group-text,
 .input-group-prepend .input-group-text + .input-group-text,
 .input-group-prepend .input-group-text + .btn,
+.input-group-prepend .rtb-booking-form .input-group-text + [type=submit],
+.rtb-booking-form .input-group-prepend .input-group-text + [type=submit],
 .input-group-append .btn + .btn,
+.input-group-append .rtb-booking-form [type=submit] + .btn,
+.rtb-booking-form .input-group-append [type=submit] + .btn,
+.input-group-append .rtb-booking-form .btn + [type=submit],
+.rtb-booking-form .input-group-append .btn + [type=submit],
+.input-group-append .rtb-booking-form [type=submit] + [type=submit],
+.rtb-booking-form .input-group-append [type=submit] + [type=submit],
 .input-group-append .btn + .input-group-text,
+.input-group-append .rtb-booking-form [type=submit] + .input-group-text,
+.rtb-booking-form .input-group-append [type=submit] + .input-group-text,
 .input-group-append .input-group-text + .input-group-text,
-.input-group-append .input-group-text + .btn {
+.input-group-append .input-group-text + .btn,
+.input-group-append .rtb-booking-form .input-group-text + [type=submit],
+.rtb-booking-form .input-group-append .input-group-text + [type=submit] {
   margin-left: -1px;
 }
 
@@ -13817,34 +13944,46 @@ input[type=button].btn-block {
   margin-top: 0;
 }
 
-.input-group-lg > .form-control:not(textarea),
+.input-group-lg > .form-control:not(textarea), .rtb-booking-form .input-group-lg > input:not(textarea),
+.rtb-booking-form .input-group-lg > select:not(textarea),
+.rtb-booking-form .input-group-lg > textarea:not(textarea),
 .input-group-lg > .custom-select {
   height: calc(1.5em + 1rem + 2px);
 }
 
-.input-group-lg > .form-control,
+.input-group-lg > .form-control, .rtb-booking-form .input-group-lg > input,
+.rtb-booking-form .input-group-lg > select,
+.rtb-booking-form .input-group-lg > textarea,
 .input-group-lg > .custom-select,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-append > .btn {
+.rtb-booking-form .input-group-lg > .input-group-prepend > [type=submit],
+.input-group-lg > .input-group-append > .btn,
+.rtb-booking-form .input-group-lg > .input-group-append > [type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
 
-.input-group-sm > .form-control:not(textarea),
+.input-group-sm > .form-control:not(textarea), .rtb-booking-form .input-group-sm > input:not(textarea),
+.rtb-booking-form .input-group-sm > select:not(textarea),
+.rtb-booking-form .input-group-sm > textarea:not(textarea),
 .input-group-sm > .custom-select {
   height: calc(1.5em + 0.5rem + 2px);
 }
 
-.input-group-sm > .form-control,
+.input-group-sm > .form-control, .rtb-booking-form .input-group-sm > input,
+.rtb-booking-form .input-group-sm > select,
+.rtb-booking-form .input-group-sm > textarea,
 .input-group-sm > .custom-select,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-.input-group-sm > .input-group-append > .btn {
+.rtb-booking-form .input-group-sm > .input-group-prepend > [type=submit],
+.input-group-sm > .input-group-append > .btn,
+.rtb-booking-form .input-group-sm > .input-group-append > [type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -13856,23 +13995,28 @@ input[type=button].btn-block {
   padding-right: 1.75rem;
 }
 
-.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-prepend > .btn, .rtb-booking-form .input-group > .input-group-prepend > [type=submit],
 .input-group > .input-group-prepend > .input-group-text,
 .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .btn,
+.rtb-booking-form .input-group:not(.has-validation) > .input-group-append:not(:last-child) > [type=submit],
 .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .input-group-text,
 .input-group.has-validation > .input-group-append:nth-last-child(n+3) > .btn,
+.rtb-booking-form .input-group.has-validation > .input-group-append:nth-last-child(n+3) > [type=submit],
 .input-group.has-validation > .input-group-append:nth-last-child(n+3) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.rtb-booking-form .input-group > .input-group-append:last-child > [type=submit]:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.input-group > .input-group-append > .btn,
+.input-group > .input-group-append > .btn, .rtb-booking-form .input-group > .input-group-append > [type=submit],
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
+.rtb-booking-form .input-group > .input-group-prepend:not(:first-child) > [type=submit],
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.rtb-booking-form .input-group > .input-group-prepend:first-child > [type=submit]:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -15104,7 +15248,7 @@ a.badge:hover, a.badge:focus {
   display: none;
 }
 
-.btn .badge {
+.btn .badge, .rtb-booking-form [type=submit] .badge {
   position: relative;
   top: -1px;
 }
@@ -15450,7 +15594,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   background-color: #f8f9fa;
 }
 .list-group-item-action:active {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 182, 73, 0.5);
   background-color: #e9ecef;
 }
 
@@ -16239,7 +16383,7 @@ a.close.disabled {
 
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 182, 73, 0.5);
 }
 
 .carousel {
@@ -19756,7 +19900,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-body {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(255, 182, 73, 0.5) !important;
 }
 
 .text-muted {
@@ -20784,7 +20928,7 @@ body.scroll-away-top.scroll-down:not(.nav-open) .bsx-appnav-navbar-scroll-toggle
   transition: all 400ms ease-in-out;
   transform: translate3d(0, 100%, 0);
 }
-.to-top-wrapper > .btn {
+.to-top-wrapper > .btn, .rtb-booking-form .to-top-wrapper > [type=submit] {
   margin: 0.5em;
 }
 
@@ -23176,15 +23320,18 @@ html.touchevents .logo-list-overlay-close::before {
   margin-right: -15px;
   margin-left: -15px;
 }
-.rtb-booking-form fieldset > * {
+.rtb-booking-form fieldset > *,
+.rtb-booking-form fieldset > legend {
   position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
 }
-.rtb-booking-form legend ~ div[class^=rtb-] {
-  flex: 0 0 33.3333333333%;
-  max-width: 33.3333333333%;
+@media (min-width: 576px) {
+  .rtb-booking-form legend ~ div[class^=rtb-] {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
 }
 .rtb-booking-form input,
 .rtb-booking-form select,
@@ -23192,7 +23339,6 @@ html.touchevents .logo-list-overlay-close::before {
   width: 100%;
   max-width: unset !important;
 }
-
 /*
 
 // FAQ TABLE
