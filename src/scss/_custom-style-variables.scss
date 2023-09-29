@@ -26,7 +26,7 @@ $border-color: $ci-border-color !default;
 
 $body-bg: darken($ci-color-2, 50) !default;
 $body-color: rgba($white, .8) !default;
-$headings-color: darken($white, 10) !default;
+$headings-color: rgba($secondary, .85) !default;
 
 
 /*
@@ -76,7 +76,7 @@ $bsx-appnav-navbar-bg-color:				rgba($dark, 0.94) !default; // header
 // dektop only
 $bsx-appnav-main-navbar-desktop-margin: 	0 auto 0 auto !default;
 
-$bsx-appnav-navbar-brand-max-width:			185px !default;
+$bsx-appnav-navbar-brand-max-width:			165px !default;
 
 $bsx-appnav-quickstart-bg-color: 			$info !default;
 
@@ -106,7 +106,7 @@ $bsx-appnav-desktop-level-1-link-py:			1.5rem !default;
 
 
 // brand
-$bsx-appnav-navbar-brand-padding:			.75rem 1rem !default;
+$bsx-appnav-navbar-brand-padding:			.75rem 1rem .75rem 0 !default;
 
 
 

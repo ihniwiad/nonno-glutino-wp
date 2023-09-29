@@ -11,7 +11,7 @@ global $phoneHrefRemovePatterns;
     <div class="container">
 
         <div class="text-center mt-5 pb-3">
-            <a href="<?php echo get_bloginfo( 'url' ) . '/'; ?>">
+            <a class="footer-logo-wrapper" href="<?php echo get_bloginfo( 'url' ) . '/'; ?>">
                 <!-- inline svg logo -->
                 <?php 
                     $claimLogoPath = str_replace( 'logo.svg', 'logo-claim.svg', $logoPath );
@@ -153,7 +153,7 @@ global $phoneHrefRemovePatterns;
             </ul>
         </div>
 
-        <hr class="mt-2">
+        <hr class="border-primary mt-2">
 
         <div class="row small">
             <div class="col-sm mb-1">

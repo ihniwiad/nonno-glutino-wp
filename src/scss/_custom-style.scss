@@ -1,6 +1,59 @@
-// spacer for missing lang toggle on mobile
 
 
+.footer-logo-wrapper {
+	svg {
+		@include media-breakpoint-down(xs) {
+			width: 200px;
+		}
+		@include media-breakpoint-only(sm) {
+			width: 250px;
+		}
+	}
+}
+
+
+
+// BOKING FORM
+
+.rtb-booking-form {
+
+	// col
+	form > fieldset {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: calc($grid-gutter-width / -2);
+		margin-left: calc($grid-gutter-width / -2);
+	}
+
+	// col
+	fieldset > * {
+		position: relative;
+		width: 100%;
+		padding-right: calc($grid-gutter-width / 2);
+		padding-left: calc($grid-gutter-width / 2);
+	}
+	legend ~ div[class^="rtb-"] {
+		flex: 0 0 33.3333333333%;
+		max-width: 33.3333333333%;
+	}
+
+	// controls
+	input,
+	select,
+	textarea {
+		width: 100%;
+		max-width: unset !important;
+	}
+
+}
+
+
+
+
+
+
+
+/*
 
 // FAQ TABLE
 
@@ -20,9 +73,12 @@
 
 
 
+// spacer for missing lang toggle on mobile
 
 @include bsx-appnav-navigation(mobile) {
   .bsx-lang-toggle-spacer {
     padding-right: 53px;
   }
 }
+
+*/

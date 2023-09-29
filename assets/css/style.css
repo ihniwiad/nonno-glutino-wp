@@ -10919,7 +10919,7 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 1rem;
   font-weight: 500;
   line-height: 1.2;
-  color: #e6e6e6;
+  color: rgba(255, 182, 73, 0.85);
 }
 
 h1, .h1 {
@@ -16227,7 +16227,7 @@ a.close.disabled {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
   font-size: 1rem;
-  color: #e6e6e6;
+  color: rgba(255, 182, 73, 0.85);
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
   border-top-left-radius: calc(0.3rem - 1px);
@@ -22186,6 +22186,8 @@ body.ioslte10 .column-row .h-100 {
 .text-column {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
   max-width: 672px;
 }
 
@@ -23157,18 +23159,67 @@ html.touchevents .logo-list-overlay-close::before {
   height: auto;
 }
 
-.faq-table table {
-  background: #f8f8f8;
+@media (max-width: 575.98px) {
+  .footer-logo-wrapper svg {
+    width: 200px;
+  }
 }
-@media (min-width: 400px) {
-  .faq-table th {
-    white-space: nowrap;
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footer-logo-wrapper svg {
+    width: 250px;
   }
 }
 
-@media (max-width: 991.98px) {
+.rtb-booking-form form > fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.rtb-booking-form fieldset > * {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.rtb-booking-form legend ~ div[class^=rtb-] {
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+.rtb-booking-form input,
+.rtb-booking-form select,
+.rtb-booking-form textarea {
+  width: 100%;
+  max-width: unset !important;
+}
+
+/*
+
+// FAQ TABLE
+
+.faq-table {
+
+	table {
+		background: $ci-light-block-bg;
+	}
+
+	@media (min-width: 400px) {
+		th {
+			white-space: nowrap;
+		}
+	}
+}
+
+
+
+
+// spacer for missing lang toggle on mobile
+
+@include bsx-appnav-navigation(mobile) {
   .bsx-lang-toggle-spacer {
     padding-right: 53px;
   }
 }
+
+*/
 /*# sourceMappingURL=style.css.map */

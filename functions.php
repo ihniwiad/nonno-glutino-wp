@@ -166,7 +166,7 @@ function add_additional_class_on_a( $atts, $item, $args ) {
 }
 add_filter( 'nav_menu_link_attributes', 'add_additional_class_on_a', 10, 3 );
 
-// add filter to add html content to a elem
+// add filter to add html content into a elem
 function add_additional_content_in_a( $title, $item, $args ) {
     if ( isset( $args->add_title_content ) ) {
 
@@ -188,7 +188,6 @@ function add_additional_content_in_a( $title, $item, $args ) {
         else {
             $title = $content . ' ' . $title;
         }
-
 
     }
     return $title;
