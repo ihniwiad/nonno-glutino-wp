@@ -1,4 +1,4 @@
-<div class="d-md-none position-sticky bg-info bottom-0">
+<div class="d-md-none position-sticky bg-info header-shadow bottom-0">
   <?php
     echo '<!-- Mobile Fixed Menu -->';
     wp_nav_menu( 
@@ -7,7 +7,7 @@
         'menu' => '',
         'container' => '',
         'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-        'menu_class' => 'bsx-mobile-fixed-nav row no-gutters list-unstyled border-top border-secondary mb-0',
+        'menu_class' => 'bsx-mobile-fixed-nav row no-gutters list-unstyled mb-0',
         'menu_id' => '',
         'add_li_class' => 'bsx-mobile-fixed-nav-li col', // custom filter add_additional_class_on_li(), see functions.php 
         'add_a_class' => 'bsx-mobile-fixed-nav-a text-secondary text-center', // custom filter add_additional_class_on_a(), see functions.php 

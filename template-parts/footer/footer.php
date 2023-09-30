@@ -79,14 +79,14 @@ global $phoneHrefRemovePatterns;
 
         </div>
 
-        <div class="text-center">
+        <div class="text-center pt-3 pb-3">
             <ul class="list-inline mb-0">
 
                 <?php
 
                         $social_media_list = array(
                             array( 'id' => 'facebook', 'title' => __( 'Facebook', 'bsx-wordpress' ), 'icon' => 'facebook' ),
-                            array( 'id' => 'twitter', 'title' => __( 'Twitter', 'bsx-wordpress' ), 'icon' => 'twitter' ),
+                            array( 'id' => 'twitter', 'title' => __( 'X Twitter', 'bsx-wordpress' ), 'icon' => 'twitter' ),
                             array( 'id' => 'instagram', 'title' => __( 'Instagram', 'bsx-wordpress' ), 'icon' => 'instagram' ),
                             array( 'id' => 'googleplus', 'title' => __( 'Google Plus', 'bsx-wordpress' ), 'icon' => 'google-plus' ),
                             array( 'id' => 'xing', 'title' => __( 'Xing', 'bsx-wordpress' ), 'icon' => 'xing' ),
@@ -105,7 +105,7 @@ global $phoneHrefRemovePatterns;
                                 <li class="list-inline-item mx-0">
                                     <a class="fa-stack fa-lg<?php if ( $hover_class_name ) : echo ' ' . $hover_class_name; endif ?>"<?php if ( $href ) : echo ' href="' . $href . '"'; endif ?><?php if ( $link_atts ) : echo ' ' . $link_atts ; endif ?>>
                                         <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
-                                        <i class="fa<?php if ( ! empty( $icon_type ) ) : echo $icon_type; else : echo 's'; endif; ?> fa-<?php echo $icon; ?> fa-stack-1x text-white hover-text-inverse" aria-hidden="true"></i>
+                                        <i class="fa<?php if ( ! empty( $icon_type ) ) : echo $icon_type; else : echo 's'; endif; ?> fa-<?php echo $icon; ?> fa-stack-1x text-dark hover-text-inverse" aria-hidden="true"></i>
                                         <span class="sr-only"><?php echo $title; ?></span>
                                     </a>
                                 </li>
