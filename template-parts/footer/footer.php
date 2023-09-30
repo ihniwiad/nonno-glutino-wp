@@ -153,29 +153,28 @@ global $phoneHrefRemovePatterns;
             </ul>
         </div>
 
-        <hr class="border-primary mt-2">
+        <div class="text-center">
+            <?php
+                echo '<!-- Footer Bottom Menu -->';
+                wp_nav_menu( 
+                    array( 
+                        'theme_location' => 'footer-bottom-menu',
+                        'menu' => '',
+                        'container' => '',
+                        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'menu_class' => 'bsx-footer-bottom-nav list-unstyled',
+                        'menu_id' => '',
+                        'add_li_class' => 'footer-bottom-menu-li', // custom filter add_additional_class_on_li(), see functions.php 
+                        'add_a_class' => 'footer-link' // custom filteradd_additional_class_on_a(), see functions.php 
+                    ) 
+                ); 
+            ?>
+        </div>
 
-        <div class="row small">
-            <div class="col-sm mb-1">
-                &copy; Copyright <?php echo date_format( date_create(), 'Y' ); ?> <a class="footer-link" href="<?php echo get_bloginfo( 'url' ) . '/'; ?>"><?php echo ( get_option( 'owner-name' ) ) ? get_option( 'owner-name' ) : get_bloginfo( 'name' ); ?></a>
-            </div>
-            <div class="col-sm text-sm-right mb-1">
-                <?php
-                    echo '<!-- Footer Bottom Menu -->';
-                    wp_nav_menu( 
-                        array( 
-                            'theme_location' => 'footer-bottom-menu',
-                            'menu' => '',
-                            'container' => '',
-                            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                            'menu_class' => 'bsx-footer-bottom-nav list-unstyled',
-                            'menu_id' => '',
-                            'add_li_class' => 'footer-bottom-menu-li', // custom filter add_additional_class_on_li(), see functions.php 
-                            'add_a_class' => 'footer-link' // custom filteradd_additional_class_on_a(), see functions.php 
-                        ) 
-                    ); 
-                ?>
-            </div>
+        <hr class="border-primary mt-1">
+
+        <div class="text-center small mt-24mb-2">
+            &copy; Copyright <?php echo date_format( date_create(), 'Y' ); ?> <a class="footer-link" href="<?php echo get_bloginfo( 'url' ) . '/'; ?>"><?php echo ( get_option( 'owner-name' ) ) ? get_option( 'owner-name' ) : get_bloginfo( 'name' ); ?></a>
         </div>
 
     </div>

@@ -17973,7 +17973,7 @@ button.bg-dark:focus {
   margin: 1rem !important;
 }
 
-.mt-3,
+.mt-3, .rtb-booking-form .add-message,
 .my-3 {
   margin-top: 1rem !important;
 }
@@ -17997,7 +17997,7 @@ button.bg-dark:focus {
   margin: 1.5rem !important;
 }
 
-.mt-4,
+.mt-4, .rtb-booking-form fieldset + fieldset > legend,
 .my-4 {
   margin-top: 1.5rem !important;
 }
@@ -23326,6 +23326,7 @@ html.touchevents .logo-list-overlay-close::before {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  margin-top: 0 !important;
 }
 @media (min-width: 576px) {
   .rtb-booking-form legend ~ div[class^=rtb-] {
@@ -23333,11 +23334,26 @@ html.touchevents .logo-list-overlay-close::before {
     max-width: 33.3333333333%;
   }
 }
+.rtb-booking-form legend {
+  margin-bottom: 0;
+  line-height: 1.25;
+}
+.rtb-booking-form fieldset {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.rtb-booking-form label {
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+}
 .rtb-booking-form input,
 .rtb-booking-form select,
 .rtb-booking-form textarea {
   width: 100%;
   max-width: unset !important;
+}
+.rtb-booking-form .rtb-form-submit {
+  margin-top: 0 !important;
 }
 /*
 

@@ -32,6 +32,7 @@
 		width: 100%;
 		padding-right: calc($grid-gutter-width / 2);
 		padding-left: calc($grid-gutter-width / 2);
+		margin-top: 0 !important;
 	}
 	@include media-breakpoint-up(sm) {
 		// col 4
@@ -41,6 +42,25 @@
 		}
 	}
 
+	// headings
+	legend {
+		margin-bottom: 0;
+		line-height: 1.25;
+	}
+	fieldset + fieldset > legend {
+		@extend .mt-4;
+	}
+
+	fieldset {
+		padding-bottom: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	label {
+		margin-top: .5rem;
+		margin-bottom: .1rem;
+	}
+
 	// controls
 	input,
 	select,
@@ -48,6 +68,14 @@
 		width: 100%;
 		max-width: unset !important;
 		@extend .form-control;
+	}
+
+	.add-message {
+		@extend .mt-3;
+	}
+
+	.rtb-form-submit {
+		margin-top: 0 !important;
 	}
 
 	[type="submit"] {
