@@ -173,7 +173,7 @@ global $phoneHrefRemovePatterns;
 
         <hr class="border-primary mt-1">
 
-        <div class="text-center small mt-24mb-2">
+        <div class="text-center small mt-3 mb-2">
             &copy; Copyright <?php echo date_format( date_create(), 'Y' ); ?> <a class="footer-link" href="<?php echo get_bloginfo( 'url' ) . '/'; ?>"><?php echo ( get_option( 'owner-name' ) ) ? get_option( 'owner-name' ) : get_bloginfo( 'name' ); ?></a>
         </div>
 

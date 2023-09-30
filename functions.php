@@ -1432,28 +1432,4 @@ if ( class_exists( 'Bsx_Mail_Form' ) && method_exists( 'Bsx_Mail_Form' , 'init' 
 }
 
 
-/**
- * references custom post
- */
-$file = dirname( __FILE__ ).'/inc/references/custom-post-type.php';
-if ( file_exists( $file ) ) {
-    require $file;
-}
-/**
- * references meta box
- */
-$file = dirname( __FILE__ ) . '/inc/references/meta-box.php';
-if ( file_exists( $file ) ) {
-    require $file;
-    ( new ReferencesMeta() )->init();
-}
-/**
- * references shortcode
- */
-$file = dirname( __FILE__ ) . '/inc/references/shortcode.php';
-if ( file_exists( $file ) ) {
-    require $file;
-    ( new ReferencesShortcode() )->init();
-}
-
 

@@ -25,7 +25,7 @@ $border-color: $ci-border-color !default;
 
 
 $body-bg: darken($ci-color-2, 50) !default;
-$body-color: rgba($secondary, .5) !default;
+$body-color: rgba($secondary, .55) !default;
 $headings-color: rgba($secondary, .85) !default;
 
 
@@ -156,7 +156,7 @@ $bsx-menu-button-item-selector: 	'.menu-button' !default;
 
 // BELOW NAVBAR
 
-$bsx-below-navbar-top:					6rem !important !default; // overwrite other padding top rules
+$bsx-below-navbar-top:					7.5rem !important !default; // overwrite other padding top rules
 
 
 /*

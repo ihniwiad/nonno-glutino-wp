@@ -23,7 +23,7 @@ global $logoPath;
 		<?php 
 
 			// include 'src/libs/data-processing-consent/example.php';
-			include 'template-parts/footer/consent-popup.php';
+			// include 'template-parts/footer/consent-popup.php';
 
 			include 'template-parts/footer/mobile-fixed-menu.php';
 

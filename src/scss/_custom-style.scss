@@ -46,6 +46,8 @@
 	legend {
 		margin-bottom: 0;
 		line-height: 1.25;
+		@extend .h5;
+		@extend .text-inherit;
 	}
 	fieldset + fieldset > legend {
 		@extend .mt-4;
@@ -93,24 +95,6 @@
 
 
 /*
-
-// FAQ TABLE
-
-.faq-table {
-
-	table {
-		background: $ci-light-block-bg;
-	}
-
-	@media (min-width: 400px) {
-		th {
-			white-space: nowrap;
-		}
-	}
-}
-
-
-
 
 // spacer for missing lang toggle on mobile
 

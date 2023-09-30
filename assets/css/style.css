@@ -10616,7 +10616,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: rgba(255, 182, 73, 0.5);
+  color: rgba(255, 182, 73, 0.55);
   text-align: left;
   background-color: black;
 }
@@ -10915,7 +10915,7 @@ template {
 }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1, .h2, .h3, .h4, .h5, .rtb-booking-form legend, .h6 {
   margin-bottom: 1rem;
   font-weight: 500;
   line-height: 1.2;
@@ -10958,7 +10958,7 @@ h4, .h4 {
   }
 }
 
-h5, .h5 {
+h5, .h5, .rtb-booking-form legend {
   font-size: 1.25rem;
 }
 
@@ -12067,7 +12067,7 @@ pre code {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: rgba(255, 182, 73, 0.5);
+  color: rgba(255, 182, 73, 0.55);
 }
 .table th,
 .table td {
@@ -12112,7 +12112,7 @@ pre code {
 }
 
 .table-hover tbody tr:hover {
-  color: rgba(255, 182, 73, 0.5);
+  color: rgba(255, 182, 73, 0.55);
   background-color: rgba(0, 0, 0, 0.075);
 }
 
@@ -12496,7 +12496,7 @@ select.form-control:focus::-ms-value,
   margin-bottom: 0;
   font-size: 1rem;
   line-height: 1.5;
-  color: rgba(255, 182, 73, 0.5);
+  color: rgba(255, 182, 73, 0.55);
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0;
@@ -12872,7 +12872,7 @@ textarea.form-control,
 .btn, .rtb-booking-form [type=submit] {
   display: inline-block;
   font-weight: 400;
-  color: rgba(255, 182, 73, 0.5);
+  color: rgba(255, 182, 73, 0.55);
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -12893,7 +12893,7 @@ textarea.form-control,
   }
 }
 .btn:hover, .rtb-booking-form [type=submit]:hover {
-  color: rgba(255, 182, 73, 0.5);
+  color: rgba(255, 182, 73, 0.55);
   text-decoration: none;
 }
 .btn:focus, .rtb-booking-form [type=submit]:focus, .btn.focus, .rtb-booking-form .focus[type=submit] {
@@ -13461,7 +13461,7 @@ input[type=button].btn-block {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: rgba(255, 182, 73, 0.5);
+  color: rgba(255, 182, 73, 0.55);
   text-align: left;
   list-style: none;
   background-color: #ffffff;
@@ -15594,7 +15594,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   background-color: #f8f9fa;
 }
 .list-group-item-action:active {
-  color: rgba(255, 182, 73, 0.5);
+  color: rgba(255, 182, 73, 0.55);
   background-color: #e9ecef;
 }
 
@@ -16383,7 +16383,7 @@ a.close.disabled {
 
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: rgba(255, 182, 73, 0.5);
+  color: rgba(255, 182, 73, 0.55);
 }
 
 .carousel {
@@ -19900,7 +19900,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-body {
-  color: rgba(255, 182, 73, 0.5) !important;
+  color: rgba(255, 182, 73, 0.55) !important;
 }
 
 .text-muted {
@@ -20073,7 +20073,7 @@ a.text-dark:hover, a.text-dark:focus {
   bottom: -1px;
 }
 
-.text-inherit {
+.text-inherit, .rtb-booking-form legend {
   color: inherit !important;
 }
 
@@ -20140,12 +20140,12 @@ b, strong {
 }
 
 .heading-inherit-text h1, .heading-inherit-text h2, .heading-inherit-text h3, .heading-inherit-text h4, .heading-inherit-text h5, .heading-inherit-text h6,
-.heading-inherit-text .h1, .heading-inherit-text .h2, .heading-inherit-text .h3, .heading-inherit-text .h4, .heading-inherit-text .h5, .heading-inherit-text .h6 {
+.heading-inherit-text .h1, .heading-inherit-text .h2, .heading-inherit-text .h3, .heading-inherit-text .h4, .heading-inherit-text .h5, .heading-inherit-text .rtb-booking-form legend, .rtb-booking-form .heading-inherit-text legend, .heading-inherit-text .h6 {
   color: inherit;
 }
 
 .heading-inherit-font-weight h1, .heading-inherit-font-weight h2, .heading-inherit-font-weight h3, .heading-inherit-font-weight h4, .heading-inherit-font-weight h5, .heading-inherit-font-weight h6,
-.heading-inherit-font-weight .h1, .heading-inherit-font-weight .h2, .heading-inherit-font-weight .h3, .heading-inherit-font-weight .h4, .heading-inherit-font-weight .h5, .heading-inherit-font-weight .h6 {
+.heading-inherit-font-weight .h1, .heading-inherit-font-weight .h2, .heading-inherit-font-weight .h3, .heading-inherit-font-weight .h4, .heading-inherit-font-weight .h5, .heading-inherit-font-weight .rtb-booking-form legend, .rtb-booking-form .heading-inherit-font-weight legend, .heading-inherit-font-weight .h6 {
   font-weight: inherit;
 }
 
@@ -20861,7 +20861,7 @@ body.scroll-away-top.scroll-down:not(.nav-open) .bsx-appnav-navbar-scroll-toggle
 }
 
 .below-navbar-content {
-  padding-top: 6rem !important;
+  padding-top: 7.5rem !important;
 }
 
 .main-container-banner {
@@ -23356,24 +23356,6 @@ html.touchevents .logo-list-overlay-close::before {
   margin-top: 0 !important;
 }
 /*
-
-// FAQ TABLE
-
-.faq-table {
-
-	table {
-		background: $ci-light-block-bg;
-	}
-
-	@media (min-width: 400px) {
-		th {
-			white-space: nowrap;
-		}
-	}
-}
-
-
-
 
 // spacer for missing lang toggle on mobile
 
