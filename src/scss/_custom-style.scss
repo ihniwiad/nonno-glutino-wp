@@ -86,6 +86,16 @@
 		@extend .btn-lg;
 	}
 
+	// message
+	.rtb-message {
+		@extend .alert;
+		@extend .alert-warning;
+
+		> p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
 }
 
 

@@ -15381,7 +15381,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   border-radius: 0;
 }
 
-.alert {
+.alert, .rtb-booking-form .rtb-message {
   position: relative;
   padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
@@ -15457,15 +15457,15 @@ a.badge-dark:focus, a.badge-dark.focus {
   color: #080604;
 }
 
-.alert-warning {
+.alert-warning, .rtb-booking-form .rtb-message {
   color: #857036;
   background-color: #fff7e1;
   border-color: #fff4d5;
 }
-.alert-warning hr {
+.alert-warning hr, .rtb-booking-form .rtb-message hr {
   border-top-color: #ffedbc;
 }
-.alert-warning .alert-link {
+.alert-warning .alert-link, .rtb-booking-form .rtb-message .alert-link {
   color: #615127;
 }
 
@@ -23355,6 +23355,10 @@ html.touchevents .logo-list-overlay-close::before {
 .rtb-booking-form .rtb-form-submit {
   margin-top: 0 !important;
 }
+.rtb-booking-form .rtb-message > p:last-child {
+  margin-bottom: 0;
+}
+
 .header-shadow {
   box-shadow: 0 -1px 0 0 rgba(255, 255, 255, 0.2), 0 0 15px 0 rgba(255, 255, 255, 0.1);
 }

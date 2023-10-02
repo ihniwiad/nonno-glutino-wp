@@ -11,14 +11,14 @@ Example workspace setting (using publishing from workspace to WordPress):
 ...
   ┗ workspace
     ┗ my-project
-      ┣ bsx-wordpress
+      ┣ nonno-glutino
       ┗ bsx-blocks
 ...
   ┗ htdocs
     ┗ my-projects-wordpress
       ┗ wp-content
         ┣ themes
-        ┃ ┗ bsx-wordpress
+        ┃ ┗ nonno-glutino
         ┗ plugins
           ┗ bsx-blocks
 ```
@@ -31,8 +31,8 @@ You need the following variables if you use a workspace outside your WordPress f
 Example:
 
 ```
-FOLDER_NAME=bsx-wordpress
-PUBLISH_PATH=../../../../../../Applications/MAMP/htdocs/wordpress-testing/wp-content/themes/
+FOLDER_NAME=nonno-glutino
+PUBLISH_PATH=../../../../../../Applications/MAMP/htdocs/nonno-glutino/wp-content/themes/
 ```
 
 All of your Plugin’s files but `node_modules` will be copied to this folder (as `bsx-blocks` folder) each time you build.
