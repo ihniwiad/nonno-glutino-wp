@@ -17,7 +17,7 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
             <i class="fa fa-navicon" aria-hidden="true"></i>
         </button>
 
-        <a class="bsx-appnav-navbar-brand" href="<?php echo get_bloginfo( 'url' ) . '/'; ?>">
+        <a class="bsx-appnav-navbar-brand" href="<?php echo ( is_front_page() ) ? '#top' : get_bloginfo( 'url' ) . '/'; ?>">
             <!-- inline svg logo -->
             <?php 
                 $logo = file_get_contents( $logoPath );

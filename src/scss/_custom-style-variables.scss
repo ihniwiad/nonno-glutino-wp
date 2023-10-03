@@ -45,17 +45,21 @@ $link-color:            $bsx-text-primary !default;
 // ci light color (nav hover, footer, ...) 
 $ci-light-color: #f0f0f0 !default;
 
-
-
-
-
-// FONT 
-
-$line-height-base:        		1.8 !default;
-
-
-
 */
+
+
+
+// TYPO 
+
+
+$font-size-base:              .9rem !default; // Assumes the browser default, typically `14.4px`
+
+$font-family-sans-serif:      Merriweather, Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
+
+//$headings-font-family:        "Young Serif", Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
+//$headings-font-weight:        400 !default;
+
+
 
 
 // TEXT

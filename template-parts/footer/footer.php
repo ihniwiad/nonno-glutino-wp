@@ -11,7 +11,7 @@ global $phoneHrefRemovePatterns;
     <div class="container">
 
         <div class="text-center mt-5 pb-3">
-            <a class="footer-logo-wrapper" href="<?php echo get_bloginfo( 'url' ) . '/'; ?>">
+            <a class="footer-logo-wrapper" href="<?php echo ( is_front_page() ) ? '#top' : get_bloginfo( 'url' ) . '/'; ?>">
                 <!-- inline svg logo -->
                 <?php 
                     $claimLogoPath = str_replace( 'logo.svg', 'logo-claim.svg', $logoPath );

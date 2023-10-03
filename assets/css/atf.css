@@ -13,16 +13,6 @@ $link-color:            $bsx-text-primary !default;
 // ci light color (nav hover, footer, ...) 
 $ci-light-color: #f0f0f0 !default;
 
-
-
-
-
-// FONT 
-
-$line-height-base:        		1.8 !default;
-
-
-
 */
 /*
 
@@ -75,7 +65,7 @@ $bsx-button-info-color: $bsx-text-primary !default;
 
 */
 body {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   margin: 0;
   color: transparent;
@@ -119,7 +109,7 @@ body {
     border: none;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: transparent;
   }
   .bsx-appnav-navbar-toggler::before {
@@ -144,7 +134,7 @@ body {
   margin-right: auto;
   padding: 0.75rem 0.2rem 0.75rem 0.2rem;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: inherit;
   white-space: nowrap;
   max-width: 160px;
