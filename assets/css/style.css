@@ -23278,6 +23278,10 @@ html.touchevents .logo-list-overlay-close::before {
   height: auto;
 }
 
+.z-10 {
+  z-index: 10 !important;
+}
+
 @media (max-width: 575.98px) {
   .footer-logo-wrapper svg {
     width: 200px;
@@ -23298,7 +23302,7 @@ html.touchevents .logo-list-overlay-close::before {
 }
 
 .bsx-mobile-fixed-wrapper {
-  z-index: 250;
+  z-index: 1020;
 }
 
 .rtb-booking-form form > fieldset {
