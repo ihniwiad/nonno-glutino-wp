@@ -17972,7 +17972,7 @@ button.bg-dark:focus {
   margin: 1.5rem !important;
 }
 
-.mt-4, .rtb-booking-form fieldset + fieldset > legend,
+.mt-4,
 .my-4 {
   margin-top: 1.5rem !important;
 }
@@ -18116,7 +18116,7 @@ button.bg-dark:focus {
   padding: 1.5rem !important;
 }
 
-.pt-4,
+.pt-4, .rtb-booking-form fieldset + fieldset > legend,
 .py-4 {
   padding-top: 1.5rem !important;
 }
@@ -23281,12 +23281,24 @@ html.touchevents .logo-list-overlay-close::before {
 @media (max-width: 575.98px) {
   .footer-logo-wrapper svg {
     width: 200px;
+    height: auto;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   .footer-logo-wrapper svg {
     width: 250px;
+    height: auto;
   }
+}
+
+@media (max-width: 767.98px) {
+  .to-top-wrapper {
+    padding-bottom: 3.75rem;
+  }
+}
+
+.bsx-mobile-fixed-wrapper {
+  z-index: 250;
 }
 
 .rtb-booking-form form > fieldset {
@@ -23318,8 +23330,8 @@ html.touchevents .logo-list-overlay-close::before {
   margin-bottom: 0 !important;
 }
 .rtb-booking-form label {
-  margin-top: 0.5rem;
-  margin-bottom: 0.1rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.2rem;
 }
 .rtb-booking-form input,
 .rtb-booking-form select,

@@ -4,11 +4,24 @@
 	svg {
 		@include media-breakpoint-down(xs) {
 			width: 200px;
+			height: auto;
 		}
 		@include media-breakpoint-only(sm) {
 			width: 250px;
+			height: auto;
 		}
 	}
+}
+
+// add additional space to not overlay bottom fixed menu
+.to-top-wrapper {
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 3.75rem;
+	}
+}
+// posituin bottom fixed menu above to top button
+.bsx-mobile-fixed-wrapper {
+	z-index: 250;
 }
 
 
@@ -50,7 +63,7 @@
 		@extend .text-inherit;
 	}
 	fieldset + fieldset > legend {
-		@extend .mt-4;
+		@extend .pt-4;
 	}
 
 	fieldset {
@@ -59,8 +72,8 @@
 	}
 
 	label {
-		margin-top: .5rem;
-		margin-bottom: .1rem;
+		margin-top: .6rem;
+		margin-bottom: .2rem;
 	}
 
 	// controls
