@@ -73,6 +73,7 @@ var Utils = {
         }
     ],
 
+    anchorOffsetTopDistance: 20,
     anchorOffsetTop: 0,
     
 };
@@ -84,16 +85,19 @@ Utils.$targetElems = Utils.$functionAndTargetElems.filter( Utils.selectors.targe
 
 // anchors offset top
 var anchorOffsetTopSelector = '[data-fn~="anchor-offset-elem"]';
-var anchorOffsetTopDistance = 20;
 var $anchorOffsetTopElem = Utils.$functionElems.filter( anchorOffsetTopSelector );
 
 $.fn._getAnchorOffset = function() {
     // if header element position is fixed scroll below header
 
-    var offsetTop = anchorOffsetTopDistance;
+    var offsetTop = Utils.anchorOffsetTopDistance;
 
     if ( $anchorOffsetTopElem.length > 0 && $anchorOffsetTopElem.css( 'position' ) == 'fixed' ) {
+        // header fixed and shown, scroll below header
         offsetTop += $anchorOffsetTopElem.outerHeight();
+    }
+    else {
+        // header not shown or not fixed, keep default offsetTop value
     }
 
     return offsetTop;

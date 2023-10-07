@@ -1,6 +1,6 @@
 
 // import './browser-analytics/index';
-import './../libs/accordion/index';
+// import './../libs/accordion/index';
 // import './../libs/appear-effects/index';
 import './../libs/nav/multilevel-dropdown';
 import './../libs/toggle/toggle';
@@ -12,8 +12,8 @@ import './../libs/animated-anchors/animated-anchors';
 import './../libs/cookie-related-elem/cookie-related-elem';
 import './../libs/data-processing-consent/data-processing-consent';
 import './../libs/img-gallery/init-photoswipe';
-import './../libs/slider/init-owl-carousel';
-import './../libs/form/send-mail';
+// import './../libs/slider/init-owl-carousel';
+// import './../libs/form/send-mail';
 
 
 // test scripts
