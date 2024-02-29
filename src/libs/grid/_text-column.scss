@@ -2,7 +2,7 @@
 
 
 $bsx-text-column-max-width:   34rem !default;
-$bsx-text-column-px:   calc($grid-gutter-width / 2) !default;
+//$bsx-text-column-px:   calc($grid-gutter-width / 2) !default;
 
 
 
@@ -12,8 +12,8 @@ $bsx-text-column-px:   calc($grid-gutter-width / 2) !default;
 .text-column {
   margin-left: auto;
   margin-right: auto;
-  padding-left: $bsx-text-column-px;
-  padding-right: $bsx-text-column-px;
+  //padding-left: $bsx-text-column-px;
+  //padding-right: $bsx-text-column-px;
   max-width: $bsx-text-column-max-width;
 }
 
